@@ -13,7 +13,7 @@ struct EmoDiaryApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabsView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
