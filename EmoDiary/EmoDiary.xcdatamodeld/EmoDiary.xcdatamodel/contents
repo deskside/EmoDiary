@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="EachTime" representedClassName="EachTime" syncable="YES" codeGenerationType="class">
+    <entity name="EmoEachTime" representedClassName="EmoEachTime" syncable="YES" codeGenerationType="class">
         <attribute name="emotions" optional="YES" attributeType="Transformable" valueTransformerName="[String]"/>
         <attribute name="feelings" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
