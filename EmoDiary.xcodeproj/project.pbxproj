@@ -59,9 +59,9 @@
 				E4C981A6292210FA0061B3E2 /* EmoDiaryApp.swift */,
 				E4C981A8292210FA0061B3E2 /* ContentView.swift */,
 				E4C981AA292210FB0061B3E2 /* Assets.xcassets */,
-				E4C981AF292210FB0061B3E2 /* Persistence.swift */,
 				E4C981B4292210FB0061B3E2 /* Info.plist */,
 				E4C981B1292210FB0061B3E2 /* EmoDiary.xcdatamodeld */,
+				E4C981AF292210FB0061B3E2 /* Persistence.swift */,
 				E4C981AC292210FB0061B3E2 /* Preview Content */,
 			);
 			path = EmoDiary;
