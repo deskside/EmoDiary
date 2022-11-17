@@ -12,6 +12,7 @@
 		E4307A522923D3DE007C94ED /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A512923D3DE007C94ED /* StatisticsView.swift */; };
 		E4307A542923D40F007C94ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A532923D40F007C94ED /* Constants.swift */; };
 		E4307A562923D53A007C94ED /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A552923D53A007C94ED /* TabsView.swift */; };
+		E49468FF29262087000B447F /* IconTextOneLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49468FE29262087000B447F /* IconTextOneLineView.swift */; };
 		E4C981A7292210FA0061B3E2 /* EmoDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C981A6292210FA0061B3E2 /* EmoDiaryApp.swift */; };
 		E4C981A9292210FA0061B3E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C981A8292210FA0061B3E2 /* ContentView.swift */; };
 		E4C981AB292210FB0061B3E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C981AA292210FB0061B3E2 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		E4307A512923D3DE007C94ED /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		E4307A532923D40F007C94ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E4307A552923D53A007C94ED /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		E49468FE29262087000B447F /* IconTextOneLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextOneLineView.swift; sourceTree = "<group>"; };
 		E4C981A3292210FA0061B3E2 /* EmoDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C981A6292210FA0061B3E2 /* EmoDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoDiaryApp.swift; sourceTree = "<group>"; };
 		E4C981A8292210FA0061B3E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				E4307A512923D3DE007C94ED /* StatisticsView.swift */,
 				E4307A4F2923D3D1007C94ED /* TodayView.swift */,
 				E4307A4D2923D3AF007C94ED /* SettingsView.swift */,
+				E49468FE29262087000B447F /* IconTextOneLineView.swift */,
 				E4307A532923D40F007C94ED /* Constants.swift */,
 				E4C981A8292210FA0061B3E2 /* ContentView.swift */,
 				E4C981AA292210FB0061B3E2 /* Assets.xcassets */,
@@ -169,6 +172,7 @@
 				E4C981A7292210FA0061B3E2 /* EmoDiaryApp.swift in Sources */,
 				E4C981B3292210FB0061B3E2 /* EmoDiary.xcdatamodeld in Sources */,
 				E4307A542923D40F007C94ED /* Constants.swift in Sources */,
+				E49468FF29262087000B447F /* IconTextOneLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

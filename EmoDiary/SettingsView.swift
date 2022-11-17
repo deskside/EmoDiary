@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @AppStorage("isDarkMode") private var isDarkMode = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List{
+                Section {
+                    Text("Test")
+                    NavigationLink(destination: IconTextOneLineView(icon: "square.and.arrow.down.on.square.fill", text: "Something")) {
+                        IconTextOneLineView(icon: "square.and.arrow.down.on.square.fill", text: "Something")
+                    }
+                    
+                } header: {
+                    Text("Test")
+                } footer: {
+                    Text("Test")
+
+                }
+
+            }
+            .listStyle(.sidebar)
+            .navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
