@@ -15,17 +15,40 @@ struct SettingsView: View {
             List{
                 Section {
                     Text("Test")
-                    NavigationLink(destination: IconTextOneLineView(icon: "square.and.arrow.down.on.square.fill", text: "Something")) {
-                        IconTextOneLineView(icon: "square.and.arrow.down.on.square.fill", text: "Something")
+                    NavigationLink(destination:
+                                    Label("Test", systemImage: "person.crop.circle.badge.questionmark")
+                        .symbolRenderingMode(isDarkMode ? .multicolor : .monochrome)
+                    ) {
+                        Label("Test", systemImage: "person.crop.circle.badge.questionmark")
+                            .symbolRenderingMode(.multicolor)
+                            .foregroundColor(isDarkMode ? .white : .black)
                     }
                     
                 } header: {
                     Text("Test")
                 } footer: {
                     Text("Test")
-
+                    
                 }
-
+                
+                Section {
+                    Toggle(isOn: $isDarkMode) {
+                        Label("Dark mode", systemImage: "moon.circle.fill")
+//                            .symbolVariant(isDarkMode ? .fill : .none)
+                            .symbolRenderingMode(isDarkMode ? .multicolor : .monochrome)
+                        
+                    }
+                    .toggleStyle(.switch)
+                    .foregroundColor(isDarkMode ? .white : .black)
+                    
+                    
+                } header: {
+                    Text("Appearence")
+                } footer: {
+                    Text("Test")
+                    
+                }
+                
             }
             .listStyle(.sidebar)
             .navigationTitle("Settings")
