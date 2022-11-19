@@ -10,7 +10,7 @@ import SwiftUI
 struct TabsView: View {
     @Environment(\.managedObjectContext) var viewContext
     @FetchRequest(sortDescriptors: []) var eachEmo: FetchedResults<EmoEachTime>
-    @State private var tabSelection:Int = 0
+    @State private var tabSelection:Int = 4
     
     var body: some View {
         TabView(selection: $tabSelection) {

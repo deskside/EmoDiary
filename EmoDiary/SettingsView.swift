@@ -14,6 +14,9 @@ struct SettingsView: View {
     
     @AppStorage("localization") private var localization = "zh"
     
+    @State private var isColorAutoMatchEmo = true
+    @State private var bgColor = Color.blue.opacity(0.5)
+    
     var body: some View {
         NavigationStack {
             List{
@@ -37,13 +40,38 @@ struct SettingsView: View {
                 
                 // MARK: Appearence
                 Section {
+                    
+                    // MARK: Color auto-match emotion
+                    Toggle(isOn: $isColorAutoMatchEmo) {
+                        Label("Auto-match emotions", systemImage: "paintpalette")
+                            .symbolRenderingMode(isColorAutoMatchEmo ? .multicolor : .monochrome)
+                            .foregroundColor(isDarkMode ? .white : .black)
+                    }
+                    
+                    
+                    
+                    if isColorAutoMatchEmo == false{
+                        HStack {
+                            Label("Custom color") {
+                                Image(systemName: "circle.hexagongrid.fill")
+                                    .symbolRenderingMode(isColorAutoMatchEmo ? .multicolor : .monochrome)
+                                    .foregroundColor(bgColor)
+                            }
+                            
+                            
+                            ColorPicker("", selection: $bgColor, supportsOpacity: false)
+                                .padding(.horizontal)
+                        }
+                    }
+                    
+                    // MARK: Dark mode
                     Toggle(isOn: $isDarkMode) {
                         Label("Dark mode", systemImage: "moon.circle.fill")
                             .symbolRenderingMode(isDarkMode ? .multicolor : .monochrome)
-                        
+                            .foregroundColor(isDarkMode ? .white : .black)
                     }
                     .toggleStyle(.switch)
-                    .foregroundColor(isDarkMode ? .white : .black)
+                    
                     //                    Picker(selection: $darkModeAccording) {
                     //                        Text("Light")
                     //                            .tag(0)
@@ -87,7 +115,7 @@ struct SettingsView: View {
             }
             .listStyle(.sidebar)
             .navigationTitle("Settings")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.automatic)
         }
     }
 }
