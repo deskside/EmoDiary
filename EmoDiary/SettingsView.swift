@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct SettingsView: View {
+    //    @AppStorage("darkModeAccording") private var darkModeAccording = 0
+    //    @Environment(\.colorScheme) var colorScheme
     @AppStorage("isDarkMode") private var isDarkMode = false
-    @AppStorage("localization") private var localization = "zh"
     
+    @AppStorage("localization") private var localization = "zh"
     
     var body: some View {
         NavigationStack {
@@ -33,15 +35,36 @@ struct SettingsView: View {
                     
                 }
                 
+                // MARK: Appearence
                 Section {
                     Toggle(isOn: $isDarkMode) {
                         Label("Dark mode", systemImage: "moon.circle.fill")
-//                            .symbolVariant(isDarkMode ? .fill : .none)
                             .symbolRenderingMode(isDarkMode ? .multicolor : .monochrome)
                         
                     }
                     .toggleStyle(.switch)
                     .foregroundColor(isDarkMode ? .white : .black)
+                    //                    Picker(selection: $darkModeAccording) {
+                    //                        Text("Light")
+                    //                            .tag(0)
+                    //                        Text("Dark")
+                    //                            .tag(1)
+                    //                        Text("Auto")
+                    //                            .tag(2)
+                    //                    } label: {
+                    //                        Label("Dark mode", systemImage: "moon.circle.fill")
+                    //                            .symbolRenderingMode(isDarkMode ? .multicolor : .monochrome)
+                    //                            .foregroundColor(isDarkMode ? .white : .black)
+                    //                    }
+                    //                    .onSubmit {
+                    //                        switch darkModeAccording{
+                    //                        case 0: isDarkMode = false
+                    //                        case 1: isDarkMode = true
+                    //                        default: isDarkMode = colorScheme == .dark ? true : false
+                    //                        }
+                    //                    }
+                    
+                    
                     
                     Picker(selection: $localization) {
                         Text("English")
@@ -51,6 +74,7 @@ struct SettingsView: View {
                     } label: {
                         Label("Language", systemImage: localization == "en" ? "dollarsign.circle" : "yensign.circle")
                             .symbolRenderingMode(isDarkMode ? .multicolor : .monochrome)
+                            .foregroundColor(isDarkMode ? .white : .black)
                     }
                     
                 } header: {
