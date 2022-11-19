@@ -14,6 +14,11 @@
 		E4307A562923D53A007C94ED /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A552923D53A007C94ED /* TabsView.swift */; };
 		E47EEAB629287AD8003E6493 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EEAB529287AD8003E6493 /* Emojis.swift */; };
 		E47EEABA2928BC43003E6493 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E47EEABC2928BC43003E6493 /* Localizable.strings */; };
+		E47EEAC12928FF5A003E6493 /* EmotionsManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EEAC02928FF5A003E6493 /* EmotionsManagementView.swift */; };
+		E47EEAC429290821003E6493 /* JsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EEAC329290821003E6493 /* JsonModel.swift */; };
+		E47EEAC62929085B003E6493 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EEAC52929085B003E6493 /* DataService.swift */; };
+		E47EEACC29290965003E6493 /* EmotionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EEACB29290965003E6493 /* EmotionsViewModel.swift */; };
+		E47EEAD029290C3F003E6493 /* Emotions.json in Resources */ = {isa = PBXBuildFile; fileRef = E47EEACF29290C3F003E6493 /* Emotions.json */; };
 		E494690529267768000B447F /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = E494690429267768000B447F /* SlideOverCard */; };
 		E4946908292725F3000B447F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = E4946907292725F3000B447F /* SwiftUIX */; };
 		E494690A29272B0A000B447F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494690929272B0A000B447F /* TestView.swift */; };
@@ -34,6 +39,11 @@
 		E47EEAB529287AD8003E6493 /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
 		E47EEABB2928BC43003E6493 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E47EEABD2928BC46003E6493 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E47EEAC02928FF5A003E6493 /* EmotionsManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsManagementView.swift; sourceTree = "<group>"; };
+		E47EEAC329290821003E6493 /* JsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModel.swift; sourceTree = "<group>"; };
+		E47EEAC52929085B003E6493 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		E47EEACB29290965003E6493 /* EmotionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsViewModel.swift; sourceTree = "<group>"; };
+		E47EEACF29290C3F003E6493 /* Emotions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Emotions.json; sourceTree = "<group>"; };
 		E494690929272B0A000B447F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		E4C981A3292210FA0061B3E2 /* EmoDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C981A6292210FA0061B3E2 /* EmoDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoDiaryApp.swift; sourceTree = "<group>"; };
@@ -67,6 +77,18 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		E47EEAC22929080C003E6493 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				E47EEACB29290965003E6493 /* EmotionsViewModel.swift */,
+				E47EEAC329290821003E6493 /* JsonModel.swift */,
+				E47EEAC52929085B003E6493 /* DataService.swift */,
+				E47EEACF29290C3F003E6493 /* Emotions.json */,
+				E4C981AF292210FB0061B3E2 /* Persistence.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		E4C9819A292210F90061B3E2 = {
 			isa = PBXGroup;
 			children = (
@@ -92,13 +114,14 @@
 				E4307A512923D3DE007C94ED /* StatisticsView.swift */,
 				E4307A4F2923D3D1007C94ED /* TodayView.swift */,
 				E4307A4D2923D3AF007C94ED /* SettingsView.swift */,
+				E47EEAC02928FF5A003E6493 /* EmotionsManagementView.swift */,
 				E4C981A8292210FA0061B3E2 /* ContentView.swift */,
 				E494690929272B0A000B447F /* TestView.swift */,
+				E47EEAC22929080C003E6493 /* JSON */,
 				E47EEAB729287F37003E6493 /* Utilities */,
 				E4C981AA292210FB0061B3E2 /* Assets.xcassets */,
 				E4C981B4292210FB0061B3E2 /* Info.plist */,
 				E4C981B1292210FB0061B3E2 /* EmoDiary.xcdatamodeld */,
-				E4C981AF292210FB0061B3E2 /* Persistence.swift */,
 				E4C981AC292210FB0061B3E2 /* Preview Content */,
 			);
 			path = EmoDiary;
@@ -182,6 +205,7 @@
 				E4C981AE292210FB0061B3E2 /* Preview Assets.xcassets in Resources */,
 				E47EEABA2928BC43003E6493 /* Localizable.strings in Resources */,
 				E4C981AB292210FB0061B3E2 /* Assets.xcassets in Resources */,
+				E47EEAD029290C3F003E6493 /* Emotions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +217,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C981B0292210FB0061B3E2 /* Persistence.swift in Sources */,
+				E47EEAC62929085B003E6493 /* DataService.swift in Sources */,
+				E47EEAC12928FF5A003E6493 /* EmotionsManagementView.swift in Sources */,
 				E4C981A9292210FA0061B3E2 /* ContentView.swift in Sources */,
+				E47EEAC429290821003E6493 /* JsonModel.swift in Sources */,
 				E4307A502923D3D1007C94ED /* TodayView.swift in Sources */,
 				E4307A562923D53A007C94ED /* TabsView.swift in Sources */,
 				E494690A29272B0A000B447F /* TestView.swift in Sources */,
@@ -202,6 +229,7 @@
 				E4C981A7292210FA0061B3E2 /* EmoDiaryApp.swift in Sources */,
 				E4C981B3292210FB0061B3E2 /* EmoDiary.xcdatamodeld in Sources */,
 				E47EEAB629287AD8003E6493 /* Emojis.swift in Sources */,
+				E47EEACC29290965003E6493 /* EmotionsViewModel.swift in Sources */,
 				E4307A542923D40F007C94ED /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

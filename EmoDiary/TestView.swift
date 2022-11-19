@@ -9,28 +9,13 @@ import SwiftUI
 import SwiftUIX
 
 struct TestView: View {
-    @State var textInput:String = ""
+    @State var minAge = 20
     @State var url:URL = URL(string: "www.baidu.com")!
     
     var body: some View {
         VStack {
-            List{
-                Text(String("🧏🏻‍♂️".isSingleEmoji))
-                Text(String("🧏🏻‍♂️".isSingleEmoji))
-                HStack {
-                    TextField( "Hint Text", text: $textInput)
-                    .textFieldStyle(.plain)
-                .autocorrectionDisabled(false)
-                    Button {
-                        textInput = ""
-                    } label: {
-                        
-                    }
-
+                    
                 }
-            }
-
-        }
     }
 }
 

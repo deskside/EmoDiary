@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct Constants {
+    static let isDataPreloaded = "isDataPreloaded"
+    
     // MARK: icon
     static let icon = ""
 }

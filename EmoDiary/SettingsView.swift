@@ -15,7 +15,7 @@ struct SettingsView: View {
     @AppStorage("localization") private var localization = "zh"
     
     @State private var isColorAutoMatchEmo = true
-    @State private var bgColor = Color.blue.opacity(0.5)
+    @State private var themeColor = Color.blue.opacity(0.5)
     
     var body: some View {
         NavigationStack {
@@ -38,6 +38,24 @@ struct SettingsView: View {
                     
                 }
                 
+                // MARK: Emotions
+                
+                Section {
+                    NavigationLink {
+                        EmotionsManagementView()
+                    } label: {
+                        Label("Emotions", systemImage: "person.crop.rectangle.stack")
+                            .symbolRenderingMode(isDarkMode ? .multicolor : .monochrome)
+                            .foregroundColor(isDarkMode ? .white : .black)
+                    }
+
+                } header: {
+                    Text("Emotions")
+                } footer: {
+                    Text("Test")
+                }
+
+                
                 // MARK: Appearence
                 Section {
                     
@@ -55,11 +73,11 @@ struct SettingsView: View {
                             Label("Custom color") {
                                 Image(systemName: "circle.hexagongrid.fill")
                                     .symbolRenderingMode(isColorAutoMatchEmo ? .multicolor : .monochrome)
-                                    .foregroundColor(bgColor)
+                                    .foregroundColor(themeColor)
                             }
                             
                             
-                            ColorPicker("", selection: $bgColor, supportsOpacity: false)
+                            ColorPicker("", selection: $themeColor, supportsOpacity: false)
                                 .padding(.horizontal)
                         }
                     }
@@ -93,7 +111,7 @@ struct SettingsView: View {
                     //                    }
                     
                     
-                    
+                    // MARK: Language
                     Picker(selection: $localization) {
                         Text("English")
                             .tag("en")
