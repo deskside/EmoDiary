@@ -9,12 +9,14 @@ import SwiftUI
 
 struct SettingsView: View {
     @AppStorage("isDarkMode") private var isDarkMode = false
+    @AppStorage("localization") private var localization = "zh"
+    
     
     var body: some View {
         NavigationStack {
             List{
                 Section {
-                    Text("Test")
+                    Text("Pro purchasing")
                     NavigationLink(destination:
                                     Label("Test", systemImage: "person.crop.circle.badge.questionmark")
                         .symbolRenderingMode(isDarkMode ? .multicolor : .monochrome)
@@ -25,7 +27,7 @@ struct SettingsView: View {
                     }
                     
                 } header: {
-                    Text("Test")
+                    Text("Pro purchasing")
                 } footer: {
                     Text("Test")
                     
@@ -41,6 +43,15 @@ struct SettingsView: View {
                     .toggleStyle(.switch)
                     .foregroundColor(isDarkMode ? .white : .black)
                     
+                    Picker(selection: $localization) {
+                        Text("English")
+                            .tag("en")
+                        Text("简体中文")
+                            .tag("zh")
+                    } label: {
+                        Label("Language", systemImage: localization == "en" ? "dollarsign.circle" : "yensign.circle")
+                            .symbolRenderingMode(isDarkMode ? .multicolor : .monochrome)
+                    }
                     
                 } header: {
                     Text("Appearence")

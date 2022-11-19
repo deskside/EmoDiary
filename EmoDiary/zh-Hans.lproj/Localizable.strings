@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  EmoDiary
+
+  Created by Joey Xie on 2022/11/19.
+  
+*/
+
+// 字符串文件中的键是大写小敏感的。
+
+
+"Language" = "语言";
+"Dark mode" = "深色模式";

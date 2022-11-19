@@ -12,8 +12,11 @@
 		E4307A522923D3DE007C94ED /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A512923D3DE007C94ED /* StatisticsView.swift */; };
 		E4307A542923D40F007C94ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A532923D40F007C94ED /* Constants.swift */; };
 		E4307A562923D53A007C94ED /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A552923D53A007C94ED /* TabsView.swift */; };
+		E47EEAB629287AD8003E6493 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EEAB529287AD8003E6493 /* Emojis.swift */; };
+		E47EEABA2928BC43003E6493 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E47EEABC2928BC43003E6493 /* Localizable.strings */; };
 		E494690529267768000B447F /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = E494690429267768000B447F /* SlideOverCard */; };
 		E4946908292725F3000B447F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = E4946907292725F3000B447F /* SwiftUIX */; };
+		E494690A29272B0A000B447F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494690929272B0A000B447F /* TestView.swift */; };
 		E4C981A7292210FA0061B3E2 /* EmoDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C981A6292210FA0061B3E2 /* EmoDiaryApp.swift */; };
 		E4C981A9292210FA0061B3E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C981A8292210FA0061B3E2 /* ContentView.swift */; };
 		E4C981AB292210FB0061B3E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C981AA292210FB0061B3E2 /* Assets.xcassets */; };
@@ -28,6 +31,10 @@
 		E4307A512923D3DE007C94ED /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		E4307A532923D40F007C94ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E4307A552923D53A007C94ED /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		E47EEAB529287AD8003E6493 /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
+		E47EEABB2928BC43003E6493 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E47EEABD2928BC46003E6493 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E494690929272B0A000B447F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		E4C981A3292210FA0061B3E2 /* EmoDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C981A6292210FA0061B3E2 /* EmoDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoDiaryApp.swift; sourceTree = "<group>"; };
 		E4C981A8292210FA0061B3E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E47EEAB729287F37003E6493 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E4307A532923D40F007C94ED /* Constants.swift */,
+				E47EEAB529287AD8003E6493 /* Emojis.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		E4C9819A292210F90061B3E2 = {
 			isa = PBXGroup;
 			children = (
@@ -71,12 +87,14 @@
 			isa = PBXGroup;
 			children = (
 				E4C981A6292210FA0061B3E2 /* EmoDiaryApp.swift */,
+				E47EEABC2928BC43003E6493 /* Localizable.strings */,
 				E4307A552923D53A007C94ED /* TabsView.swift */,
 				E4307A512923D3DE007C94ED /* StatisticsView.swift */,
 				E4307A4F2923D3D1007C94ED /* TodayView.swift */,
 				E4307A4D2923D3AF007C94ED /* SettingsView.swift */,
-				E4307A532923D40F007C94ED /* Constants.swift */,
 				E4C981A8292210FA0061B3E2 /* ContentView.swift */,
+				E494690929272B0A000B447F /* TestView.swift */,
+				E47EEAB729287F37003E6493 /* Utilities */,
 				E4C981AA292210FB0061B3E2 /* Assets.xcassets */,
 				E4C981B4292210FB0061B3E2 /* Info.plist */,
 				E4C981B1292210FB0061B3E2 /* EmoDiary.xcdatamodeld */,
@@ -140,6 +158,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = E4C9819A292210F90061B3E2;
 			packageReferences = (
@@ -161,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C981AE292210FB0061B3E2 /* Preview Assets.xcassets in Resources */,
+				E47EEABA2928BC43003E6493 /* Localizable.strings in Resources */,
 				E4C981AB292210FB0061B3E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,15 +196,29 @@
 				E4C981A9292210FA0061B3E2 /* ContentView.swift in Sources */,
 				E4307A502923D3D1007C94ED /* TodayView.swift in Sources */,
 				E4307A562923D53A007C94ED /* TabsView.swift in Sources */,
+				E494690A29272B0A000B447F /* TestView.swift in Sources */,
 				E4307A4E2923D3AF007C94ED /* SettingsView.swift in Sources */,
 				E4307A522923D3DE007C94ED /* StatisticsView.swift in Sources */,
 				E4C981A7292210FA0061B3E2 /* EmoDiaryApp.swift in Sources */,
 				E4C981B3292210FB0061B3E2 /* EmoDiary.xcdatamodeld in Sources */,
+				E47EEAB629287AD8003E6493 /* Emojis.swift in Sources */,
 				E4307A542923D40F007C94ED /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E47EEABC2928BC43003E6493 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E47EEABB2928BC43003E6493 /* zh-Hans */,
+				E47EEABD2928BC46003E6493 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E4C981B5292210FB0061B3E2 /* Debug */ = {
