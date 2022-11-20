@@ -48,13 +48,13 @@ struct SettingsView: View {
                             .symbolRenderingMode(isDarkMode ? .multicolor : .monochrome)
                             .foregroundColor(isDarkMode ? .white : .black)
                     }
-
+                    
                 } header: {
                     Text("Emotions")
                 } footer: {
                     Text("Test")
                 }
-
+                
                 
                 // MARK: Appearence
                 Section {
@@ -131,10 +131,14 @@ struct SettingsView: View {
                 }
                 
             }
+            
             .listStyle(.sidebar)
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.automatic)
+            
         }
+        
+        
     }
 }
 

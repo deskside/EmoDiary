@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E42334E1292A6E6A004D782A /* EmotionLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42334E0292A6E6A004D782A /* EmotionLineView.swift */; };
 		E4307A4E2923D3AF007C94ED /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A4D2923D3AF007C94ED /* SettingsView.swift */; };
 		E4307A502923D3D1007C94ED /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A4F2923D3D1007C94ED /* TodayView.swift */; };
 		E4307A522923D3DE007C94ED /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A512923D3DE007C94ED /* StatisticsView.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E42334E0292A6E6A004D782A /* EmotionLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionLineView.swift; sourceTree = "<group>"; };
 		E4307A4D2923D3AF007C94ED /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E4307A4F2923D3D1007C94ED /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		E4307A512923D3DE007C94ED /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				E4307A4D2923D3AF007C94ED /* SettingsView.swift */,
 				E47EEAC02928FF5A003E6493 /* EmotionsManagementView.swift */,
 				E47EEAD1292A0EC4003E6493 /* AddEmotionView.swift */,
+				E42334E0292A6E6A004D782A /* EmotionLineView.swift */,
 				E4C981A8292210FA0061B3E2 /* ContentView.swift */,
 				E494690929272B0A000B447F /* TestView.swift */,
 				E47EEAC22929080C003E6493 /* JSON */,
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C981B0292210FB0061B3E2 /* Persistence.swift in Sources */,
+				E42334E1292A6E6A004D782A /* EmotionLineView.swift in Sources */,
 				E47EEAC62929085B003E6493 /* DataService.swift in Sources */,
 				E47EEAC12928FF5A003E6493 /* EmotionsManagementView.swift in Sources */,
 				E4C981A9292210FA0061B3E2 /* ContentView.swift in Sources */,

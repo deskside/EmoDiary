@@ -13,32 +13,32 @@ struct EmotionsManagementView: View {
     
     @State var showingSheet = false
     
+    @State var nameTemp:String = ""
+    @State var emojiTemp:String = ""
+    @State var infoTemp:String = ""
+    
     var body: some View {
         List{
             
-            
             Section(header: Image(systemName: "tag")){
                 ForEach(emotions){each in
-                    HStack {
-                        Text(each.emoji ?? "")
-                            .font(.title)
-                        
-                        VStack(alignment: .leading) {
-                            HStack(alignment: .bottom) {
-                                Text(each.name ?? "")
-                                    .fontWeight(.bold)
-                                
-                                
-                            }
-                            
-                            Text(each.info ?? "")
-                                .lineLimit(2)
-                        }
-                        
-                    }
-
+                    
+                    
+                    EmotionLineView(name: each.name ?? "", emoji: each.emoji ?? "", info:each.info ?? "")
+                    
                 }
                 .onDelete(perform: deleteItems)
+                .swipeActions(edge: .leading, allowsFullSwipe:true) {
+                    Button {
+                        showingSheet.toggle()
+                    } label: {
+                        Text("Edit")
+                    }.sheet(isPresented: $showingSheet) {
+                        
+                        AddEmotionView(showingSheet: $showingSheet)
+                    }
+                    
+                }
             }
         }
         .navigationTitle("Emotions")
@@ -54,7 +54,8 @@ struct EmotionsManagementView: View {
                 }
             }
         }
-        }
+        
+    }
     
     
     
