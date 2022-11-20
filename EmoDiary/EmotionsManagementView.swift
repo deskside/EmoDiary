@@ -9,37 +9,13 @@ import SwiftUI
 
 struct EmotionsManagementView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) var emotions: FetchedResults<Emotions>
-    @State private var showingAlert = false
-    @State var addLabel:String = ""
-    @State private var showingSheet = false
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key:"name", ascending: true)]) var emotions: FetchedResults<Emotions>
+    
+    @State var showingSheet = false
     
     var body: some View {
         List{
-            Section(header: Image(systemName: "plus.square.on.square")){
-                TextField(text: $addLabel) {
-                    Text("Describe your emotion")
-                }
-                Button {
-                    if addLabel.trimmingCharacters(in: .whitespacesAndNewlines) != ""{
-                        
-                        addCoreData(text: addLabel.trimmingCharacters(in: .whitespacesAndNewlines))
-                        addLabel = ""
-                        
-                        
-                    }else{
-                        self.showingAlert = true
-                    }
-                    
-                } label: {
-                    Text("Add")
-                }
-                .alert(isPresented: $showingAlert) {
-                    Alert(title: Text("Please input something to describe your emotion"),
-                          message: Text(""),
-                          dismissButton: .default(Text("Got it")))
-                }
-            }
+            
             
             Section(header: Image(systemName: "tag")){
                 ForEach(emotions){each in
@@ -74,24 +50,14 @@ struct EmotionsManagementView: View {
                 } label: {
                     Image(systemName: "plus.app")
                 }.sheet(isPresented: $showingSheet) {
-                    TestView()
-                    
+                    AddEmotionView(showingSheet: $showingSheet)
                 }
             }
         }
         }
     
     
-    func addCoreData(text:String){
-        let coreData = Emotions(context: viewContext)
-        coreData.id = UUID()
-        coreData.name = text
-        do{
-            try viewContext.save()
-        }catch{
-            
-        }
-    }
+    
     
     private func deleteItems(offsets: IndexSet) {
         withAnimation {

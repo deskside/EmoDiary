@@ -19,6 +19,7 @@
 		E47EEAC62929085B003E6493 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EEAC52929085B003E6493 /* DataService.swift */; };
 		E47EEACC29290965003E6493 /* EmotionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EEACB29290965003E6493 /* EmotionsViewModel.swift */; };
 		E47EEAD029290C3F003E6493 /* Emotions.json in Resources */ = {isa = PBXBuildFile; fileRef = E47EEACF29290C3F003E6493 /* Emotions.json */; };
+		E47EEAD2292A0EC4003E6493 /* AddEmotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EEAD1292A0EC4003E6493 /* AddEmotionView.swift */; };
 		E494690529267768000B447F /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = E494690429267768000B447F /* SlideOverCard */; };
 		E4946908292725F3000B447F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = E4946907292725F3000B447F /* SwiftUIX */; };
 		E494690A29272B0A000B447F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494690929272B0A000B447F /* TestView.swift */; };
@@ -44,6 +45,7 @@
 		E47EEAC52929085B003E6493 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		E47EEACB29290965003E6493 /* EmotionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsViewModel.swift; sourceTree = "<group>"; };
 		E47EEACF29290C3F003E6493 /* Emotions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Emotions.json; sourceTree = "<group>"; };
+		E47EEAD1292A0EC4003E6493 /* AddEmotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmotionView.swift; sourceTree = "<group>"; };
 		E494690929272B0A000B447F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		E4C981A3292210FA0061B3E2 /* EmoDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C981A6292210FA0061B3E2 /* EmoDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoDiaryApp.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				E4307A4F2923D3D1007C94ED /* TodayView.swift */,
 				E4307A4D2923D3AF007C94ED /* SettingsView.swift */,
 				E47EEAC02928FF5A003E6493 /* EmotionsManagementView.swift */,
+				E47EEAD1292A0EC4003E6493 /* AddEmotionView.swift */,
 				E4C981A8292210FA0061B3E2 /* ContentView.swift */,
 				E494690929272B0A000B447F /* TestView.swift */,
 				E47EEAC22929080C003E6493 /* JSON */,
@@ -230,6 +233,7 @@
 				E4C981B3292210FB0061B3E2 /* EmoDiary.xcdatamodeld in Sources */,
 				E47EEAB629287AD8003E6493 /* Emojis.swift in Sources */,
 				E47EEACC29290965003E6493 /* EmotionsViewModel.swift in Sources */,
+				E47EEAD2292A0EC4003E6493 /* AddEmotionView.swift in Sources */,
 				E4307A542923D40F007C94ED /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
