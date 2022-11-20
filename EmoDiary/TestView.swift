@@ -7,25 +7,32 @@
 
 import SwiftUI
 import SwiftUIX
+import NVMColor
 
 struct TestView: View {
-    @State var image: Data?
+    @Environment(\.colorScheme) private var colorScheme
     
-    var body: some View {
-        VStack {
-            ImagePicker(data: $image, encoding: .png, onCancel: { })
-            
-            if let image = image {
-                Image(data: image)?
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 200,height: 200)
-                    .clipped()
-            }
-        }
+    let hexColor = Color.init(hexadecimal: "70049F").hex
+    var color1:Color{
+        var hexColor = Color.init(hexadecimal: "70049F").hex
+        return Color(hexadecimal: hexColor ?? "")
         
     }
+    
+    var body: some View {
+        
+        
+        
+        Text("My custom text")
+                    .foregroundColor(Color(hex: "70049F")!.themedColor(colorScheme))
+            }
+        
+
+        
+    
+    
 }
+
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
         TestView()

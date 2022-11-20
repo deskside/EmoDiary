@@ -20,6 +20,7 @@
 		E47EEACC29290965003E6493 /* EmotionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EEACB29290965003E6493 /* EmotionsViewModel.swift */; };
 		E47EEAD029290C3F003E6493 /* Emotions.json in Resources */ = {isa = PBXBuildFile; fileRef = E47EEACF29290C3F003E6493 /* Emotions.json */; };
 		E47EEAD2292A0EC4003E6493 /* AddEmotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EEAD1292A0EC4003E6493 /* AddEmotionView.swift */; };
+		E47EEAD7292A486E003E6493 /* NVMColor in Frameworks */ = {isa = PBXBuildFile; productRef = E47EEAD6292A486E003E6493 /* NVMColor */; };
 		E494690529267768000B447F /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = E494690429267768000B447F /* SlideOverCard */; };
 		E4946908292725F3000B447F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = E4946907292725F3000B447F /* SwiftUIX */; };
 		E494690A29272B0A000B447F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494690929272B0A000B447F /* TestView.swift */; };
@@ -64,6 +65,7 @@
 			files = (
 				E494690529267768000B447F /* SlideOverCard in Frameworks */,
 				E4946908292725F3000B447F /* SwiftUIX in Frameworks */,
+				E47EEAD7292A486E003E6493 /* NVMColor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,7 @@
 			packageProductDependencies = (
 				E494690429267768000B447F /* SlideOverCard */,
 				E4946907292725F3000B447F /* SwiftUIX */,
+				E47EEAD6292A486E003E6493 /* NVMColor */,
 			);
 			productName = EmoDiary;
 			productReference = E4C981A3292210FA0061B3E2 /* EmoDiary.app */;
@@ -190,6 +193,7 @@
 			packageReferences = (
 				E494690329267768000B447F /* XCRemoteSwiftPackageReference "SlideOverCard" */,
 				E4946906292725F3000B447F /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				E47EEAD5292A486D003E6493 /* XCRemoteSwiftPackageReference "NVMColor_swift" */,
 			);
 			productRefGroup = E4C981A4292210FA0061B3E2 /* Products */;
 			projectDirPath = "";
@@ -449,6 +453,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E47EEAD5292A486D003E6493 /* XCRemoteSwiftPackageReference "NVMColor_swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NVMNovem/NVMColor_swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		E494690329267768000B447F /* XCRemoteSwiftPackageReference "SlideOverCard" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/joogps/SlideOverCard";
@@ -468,6 +480,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E47EEAD6292A486E003E6493 /* NVMColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E47EEAD5292A486D003E6493 /* XCRemoteSwiftPackageReference "NVMColor_swift" */;
+			productName = NVMColor;
+		};
 		E494690429267768000B447F /* SlideOverCard */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E494690329267768000B447F /* XCRemoteSwiftPackageReference "SlideOverCard" */;
