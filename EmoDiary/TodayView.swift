@@ -9,31 +9,69 @@ import SwiftUI
 
 struct TodayView: View {
     @State private var showingAlerts = true
-    
+    @AppStorage("isDarkMode") private var isDarkMode = false
+
     var body: some View {
-        HStack {
-            Image(systemName: "person.3.sequence.fill")
-                .symbolRenderingMode(.palette)
-                .foregroundStyle(
-                    .linearGradient(colors: [.red, .black], startPoint: .top, endPoint: .bottomTrailing),
-                    .linearGradient(colors: [.green, .black], startPoint: .top, endPoint: .bottomTrailing),
-                    .linearGradient(colors: [.blue, .black], startPoint: .top, endPoint: .bottomTrailing)
-                )
-            .font(.largeTitle)
-            
-            Image(systemName: "bell")
-                .symbolVariant(.slash)
-            Image(systemName: "bell")
-                .symbolVariant(.square)
-            
-            Toggle(isOn: $showingAlerts) {
-                        Label("Show Alerts", systemImage: "bell")
-                            .symbolVariant(showingAlerts ? .none : .slash)
+        
+        NavigationStack {
+            ScrollView {
+                LazyVStack{
+                    ZStack(alignment: .bottomTrailing) {
+                        Image("mountain")
+                            .resizable()
+                            .scaledToFit()
+                            .aspectRatio(contentMode: .fit)
+                            .ignoresSafeArea()
+                        
+                        
+                        Image("avatar")
+                            .resizable()
+                            .scaledToFit()
+                            .aspectRatio(contentMode: .fit)
+                            .clipShape(Circle())
+                            .frame(width: 75, height: 75)
+                            .padding()
+                            .offset(x: 0, y: 30)
                     }
-            .toggleStyle(.button)
+                    
+                    NavigationLink {
+                        TestView()
+                    } label: {
+                        HStack {
+                            Text("🤩")
+                                .font(.largeTitle)
+                            
+                            VStack(alignment: .leading) {
+                                HStack(alignment: .bottom) {
+                                    Text("Hopeful")
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+                                    
+                                    Text("2022-11-19 12:16")
+                                        .font(.footnote)
+                                }
+                                
+                                Text("One of the major problems in SwiftUI is the lack of an imperative presentation/navigation API. This makes implementing complex navigation such as deeplinking and dynamic backend-driven user flows nigh extremely difficult, and in some cases downright impossible. This is where DynamicViewPresenter comes in.")
+                                    .lineLimit(3)
+                            }
+                            
+                        }
+                        .padding(20)
+                            .foregroundColor(isDarkMode ? .white : .black)
 
+                    }
+                    
+                    
+                    
+                    
+                    Spacer()
+                    
+                }
+            }
+            .background(.secondarySystemBackground)
+        .ignoresSafeArea()
         }
-
+        
     }
 }
 

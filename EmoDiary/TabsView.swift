@@ -14,16 +14,16 @@ struct TabsView: View {
     
     var body: some View {
         TabView(selection: $tabSelection) {
-            TodayView()
+            TestView()
                 .tabItem {
-                    Text("测试")
+                    Text("Test")
                     Image(systemName: "gearshape")
                 }
                 .tag(2)
             
-            StatisticsView()
+            TodayView()
                 .tabItem {
-                    Text("统计")
+                    Text("Today")
                     Image(systemName: "gearshape")
                 }
                 .tag(0)
@@ -31,7 +31,7 @@ struct TabsView: View {
             
             SettingsView()
                 .tabItem {
-                    Text("设置")
+                    Text("Settings")
                     Image(systemName: "gearshape")
                 }
                 .tag(4)

@@ -9,18 +9,26 @@ import SwiftUI
 import SwiftUIX
 
 struct TestView: View {
-    @State var minAge = 20
-    @State var url:URL = URL(string: "www.baidu.com")!
+    @State var image: Data?
     
     var body: some View {
         VStack {
-                    
-                }
+            ImagePicker(data: $image, encoding: .png, onCancel: { })
+            
+            if let image = image {
+                Image(data: image)?
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 200,height: 200)
+                    .clipped()
+            }
+        }
+        
     }
 }
-
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
         TestView()
     }
 }
+

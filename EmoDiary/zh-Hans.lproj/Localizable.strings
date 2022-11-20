@@ -8,6 +8,10 @@
 
 // 字符串文件中的键是大写小敏感的。
 
-
+// Title
 "Language" = "语言";
 "Dark mode" = "深色模式";
+"Settings" = "";
+"Today" = "";
+"Statistics" = "";
+
