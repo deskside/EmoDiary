@@ -41,7 +41,9 @@ class EmotionsViewModel:ObservableObject{
             
             coreData.id = UUID()
             
-            coreData.emotionName = each.emotionName
+            coreData.name = each.name
+            coreData.emoji = each.emoji
+            coreData.info = each.info
         }
         
         

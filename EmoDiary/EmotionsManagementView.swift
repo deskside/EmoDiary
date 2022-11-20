@@ -12,7 +12,7 @@ struct EmotionsManagementView: View {
     @FetchRequest(sortDescriptors: []) var emotions: FetchedResults<Emotions>
     @State private var showingAlert = false
     @State var addLabel:String = ""
-    
+    @State private var showingSheet = false
     
     var body: some View {
         List{
@@ -43,19 +43,49 @@ struct EmotionsManagementView: View {
             
             Section(header: Image(systemName: "tag")){
                 ForEach(emotions){each in
-                    Text(each.emotionName ?? "")
+                    HStack {
+                        Text(each.emoji ?? "")
+                            .font(.title)
+                        
+                        VStack(alignment: .leading) {
+                            HStack(alignment: .bottom) {
+                                Text(each.name ?? "")
+                                    .fontWeight(.bold)
+                                
+                                
+                            }
+                            
+                            Text(each.info ?? "")
+                                .lineLimit(2)
+                        }
+                        
+                    }
+
                 }
                 .onDelete(perform: deleteItems)
             }
         }
         .navigationTitle("Emotions")
         .navigationBarTitleDisplayMode(.inline)
-    }
+        .toolbar {
+            ToolbarItem (placement: .navigationBarTrailing) {
+                Button {
+                    showingSheet.toggle()
+                } label: {
+                    Image(systemName: "plus.app")
+                }.sheet(isPresented: $showingSheet) {
+                    TestView()
+                    
+                }
+            }
+        }
+        }
+    
     
     func addCoreData(text:String){
         let coreData = Emotions(context: viewContext)
         coreData.id = UUID()
-        coreData.emotionName = text
+        coreData.name = text
         do{
             try viewContext.save()
         }catch{

@@ -9,5 +9,7 @@ import Foundation
 
 class EmotionsJson:Codable,Identifiable{
     var id: UUID?
-    var emotionName:String
+    var name:String
+    var emoji:String
+    var info:String
 }

@@ -3,19 +3,41 @@
 
 [
     {
-        "emotionName":"Anxious"
+        "name":"Anxious",
+        "emoji":"🤯",
+        "info":"When you are anxious, you are very concerned or worried, but it can also refer to when you are quite interested in something. "
     },{
-        "emotionName":"Happy"
+        "name":"Hopeful",
+        "emoji":"🤩",
+        "info":"If you're hopeful about something, you're optimistic. You think it's going to turn out OK. "
     },{
-        "emotionName":"Sad"
+        "name":"Sad",
+        "emoji":"😢",
+        "info":"When you're sad, you feel unhappy."
     },{
-        "emotionName":"Upset"
+        "name":"Upset",
+        "emoji":"😩",
+        "info":"To be upset is to be disturbed or very unhappy."
     },{
-        "emotionName":"Confused"
+        "name":"Confused",
+        "emoji":"😶‍🌫️",
+        "info":"If you are confused about something, you can't think clearly. "
     },{
-        "emotionName":"Peaceful"
+        "name":"Peaceful",
+        "emoji":"😇",
+        "info":"Peaceful describes something calm and tranquil."
     },{
-        "emotionName":"Joyful"
+        "name":"Joyful",
+        "emoji":"😊",
+        "info":"Someone who's joyful is very happy."
+    },{
+        "name":"Annoyed",
+        "emoji":"😡",
+        "info":"Have you ever suddenly walked into a cloud of small bugs that buzz and poke at you? If so, you were probably annoyed. "
+    },{
+        "name":"Depressed",
+        "emoji":"😵",
+        "info":"When people are depressed they are sad and lack energy."
     }
     
 ]
