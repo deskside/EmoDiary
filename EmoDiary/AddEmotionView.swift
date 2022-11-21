@@ -20,17 +20,21 @@ struct AddEmotionView: View {
     var body: some View {
         
         List {
-            TextField(text: $addName) {
-                Text("Pick a word for your emotion")
+            Section {
+                TextField(text: $addName) {
+                    Text("Pick a word for your emotion")
+                }
+                
+                TextField(text: $addEmoji){
+                    Text("Pick an emoji  for this emotion 😄")
+                }
+                
+                TextField(text: $addInfo){
+                    Text("Describe your emotion here")
+                }
             }
             
-            TextField(text: $addEmoji){
-                Text("Pick an emoji  for this emotion 😄")
-            }
             
-            TextField(text: $addInfo){
-                Text("Describe your emotion here")
-            }
             
             Button {
                 

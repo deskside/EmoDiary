@@ -13,9 +13,11 @@ struct EmotionsManagementView: View {
     
     @State var showingSheet = false
     
+    @State private var searchQuery = ""
+    
     @State var nameTemp:String = ""
     @State var emojiTemp:String = ""
-    @State var infoTemp:String = ""
+    @State var infoTemp:String = "" 
     
     var body: some View {
         List{
@@ -41,6 +43,10 @@ struct EmotionsManagementView: View {
                 }
             }
         }
+        .searchable(text: $searchQuery)
+        .onChange(of: searchQuery, perform: { newValue in
+            emotions.nsPredicate = searchPredicate(query: newValue)
+        })
         .navigationTitle("Emotions")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -73,6 +79,11 @@ struct EmotionsManagementView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
+    }
+    
+    private func searchPredicate(query:String) -> NSPredicate? {
+        if query.isEmpty { return nil}
+        return NSPredicate(format: "%K CONTAINS[cd] %@", #keyPath(Emotions.name), query)
     }
 }
 
