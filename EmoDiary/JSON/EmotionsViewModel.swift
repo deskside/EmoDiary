@@ -17,8 +17,6 @@ class EmotionsViewModel:ObservableObject{
         checkLoadedData()
     }
     
-
-    
     // MARK: Check and preload JSON data
     func checkLoadedData(){
         // Check local storage for the flag
@@ -47,7 +45,6 @@ class EmotionsViewModel:ObservableObject{
         }
         
         
-        
         do{
             try managedObjectContext.save()
             UserDefaults.standard.setValue(true, forKey: Constants.isDataPreloaded)
@@ -56,3 +53,6 @@ class EmotionsViewModel:ObservableObject{
         
     }
 }
+
+
+

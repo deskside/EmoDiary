@@ -125,9 +125,6 @@ struct SettingsView: View {
                     
                 } header: {
                     Text("Appearence")
-                } footer: {
-                    Text("Test")
-                    
                 }
                 
             }

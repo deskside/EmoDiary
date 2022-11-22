@@ -11,7 +11,7 @@ struct AddEmotionView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) var emotions: FetchedResults<Emotions>
     
-    @Binding var showingSheet :Bool
+    @Binding var showingSheet:Bool
     @State private var showingAlert = false
     @State private var addName:String = ""
     @State private var addEmoji:String = ""

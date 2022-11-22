@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E42334E1292A6E6A004D782A /* EmotionLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42334E0292A6E6A004D782A /* EmotionLineView.swift */; };
+		E42334E3292B166E004D782A /* EmotionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42334E2292B166E004D782A /* EmotionDetailView.swift */; };
+		E42334E5292BB9C5004D782A /* EmoEachTimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42334E4292BB9C5004D782A /* EmoEachTimeLineView.swift */; };
+		E42334E9292BBFEC004D782A /* AddEmoEachTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42334E8292BBFEC004D782A /* AddEmoEachTimeView.swift */; };
 		E4307A4E2923D3AF007C94ED /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A4D2923D3AF007C94ED /* SettingsView.swift */; };
 		E4307A502923D3D1007C94ED /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A4F2923D3D1007C94ED /* TodayView.swift */; };
 		E4307A522923D3DE007C94ED /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A512923D3DE007C94ED /* StatisticsView.swift */; };
@@ -35,6 +38,9 @@
 
 /* Begin PBXFileReference section */
 		E42334E0292A6E6A004D782A /* EmotionLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionLineView.swift; sourceTree = "<group>"; };
+		E42334E2292B166E004D782A /* EmotionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionDetailView.swift; sourceTree = "<group>"; };
+		E42334E4292BB9C5004D782A /* EmoEachTimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoEachTimeLineView.swift; sourceTree = "<group>"; };
+		E42334E8292BBFEC004D782A /* AddEmoEachTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmoEachTimeView.swift; sourceTree = "<group>"; };
 		E4307A4D2923D3AF007C94ED /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E4307A4F2923D3D1007C94ED /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		E4307A512923D3DE007C94ED /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
@@ -119,10 +125,13 @@
 				E4307A552923D53A007C94ED /* TabsView.swift */,
 				E4307A512923D3DE007C94ED /* StatisticsView.swift */,
 				E4307A4F2923D3D1007C94ED /* TodayView.swift */,
+				E42334E4292BB9C5004D782A /* EmoEachTimeLineView.swift */,
+				E42334E8292BBFEC004D782A /* AddEmoEachTimeView.swift */,
 				E4307A4D2923D3AF007C94ED /* SettingsView.swift */,
 				E47EEAC02928FF5A003E6493 /* EmotionsManagementView.swift */,
 				E47EEAD1292A0EC4003E6493 /* AddEmotionView.swift */,
 				E42334E0292A6E6A004D782A /* EmotionLineView.swift */,
+				E42334E2292B166E004D782A /* EmotionDetailView.swift */,
 				E4C981A8292210FA0061B3E2 /* ContentView.swift */,
 				E494690929272B0A000B447F /* TestView.swift */,
 				E47EEAC22929080C003E6493 /* JSON */,
@@ -226,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42334E9292BBFEC004D782A /* AddEmoEachTimeView.swift in Sources */,
 				E4C981B0292210FB0061B3E2 /* Persistence.swift in Sources */,
 				E42334E1292A6E6A004D782A /* EmotionLineView.swift in Sources */,
 				E47EEAC62929085B003E6493 /* DataService.swift in Sources */,
@@ -241,6 +251,8 @@
 				E4C981B3292210FB0061B3E2 /* EmoDiary.xcdatamodeld in Sources */,
 				E47EEAB629287AD8003E6493 /* Emojis.swift in Sources */,
 				E47EEACC29290965003E6493 /* EmotionsViewModel.swift in Sources */,
+				E42334E5292BB9C5004D782A /* EmoEachTimeLineView.swift in Sources */,
+				E42334E3292B166E004D782A /* EmotionDetailView.swift in Sources */,
 				E47EEAD2292A0EC4003E6493 /* AddEmotionView.swift in Sources */,
 				E4307A542923D40F007C94ED /* Constants.swift in Sources */,
 			);

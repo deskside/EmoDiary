@@ -25,8 +25,14 @@ struct EmotionsManagementView: View {
             Section(header: Image(systemName: "tag")){
                 ForEach(emotions){each in
                     
+                    NavigationLink {
+                        EmotionDetailView(emotion: each)
+                    } label: {
+                        EmotionLineView(name: each.name ?? "", emoji: each.emoji ?? "", info:each.info ?? "")
+                        
+                    }
+
                     
-                    EmotionLineView(name: each.name ?? "", emoji: each.emoji ?? "", info:each.info ?? "")
                     
                 }
                 .onDelete(perform: deleteItems)

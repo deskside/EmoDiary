@@ -13,3 +13,4 @@ class EmotionsJson:Codable,Identifiable{
     var emoji:String
     var info:String
 }
+

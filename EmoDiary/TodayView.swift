@@ -10,7 +10,7 @@ import SwiftUI
 struct TodayView: View {
     @State private var showingAlerts = true
     @AppStorage("isDarkMode") private var isDarkMode = false
-    
+    @State var showingSheet:Bool = false
     var body: some View {
         
         NavigationStack {
@@ -37,41 +37,9 @@ struct TodayView: View {
                     NavigationLink {
                         TestView()
                     } label: {
-                        HStack {
-                            Text("🤩")
-                                .font(.largeTitle)
-                            
-                            VStack(alignment: .leading) {
-                                HStack(alignment: .bottom) {
-                                    Text("Hopeful")
-                                        .font(.title3)
-                                        .fontWeight(.bold)
-                                        .multilineTextAlignment(.leading)
-                                    
-                                    Text("2022-11-19 12:16")
-                                        .font(.footnote)
-
-                                    
-                                }
-                                
-                                Text("One of the major problems in SwiftUI is the lack of an imperative presentation/navigation API. This makes implementing complex navigation such as deeplinking and dynamic backend-driven user flows nigh extremely difficult, and in some cases downright impossible. This is where DynamicViewPresenter comes in.")
-                                    .multilineTextAlignment(.leading)
-                                    .lineLimit(3)
-                                
-                                
-                            }
-                            
-                            
-                        }
-                        .padding(.top, 30)
-                        .padding(.horizontal, 20)
-                            .foregroundColor(isDarkMode ? .white : .black)
+                        EmoEachTimeLineView()
                         
-                        
-
                     }
-                    
-                    
                     
                     
                     Spacer()
@@ -79,11 +47,23 @@ struct TodayView: View {
                 }
             }
             .background(.secondarySystemBackground)
-        .ignoresSafeArea()
+            .ignoresSafeArea()
+            .navigationTitle("Today")
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        showingSheet.toggle()
+                    } label: {
+                        Text("Add")
+                    }.sheet(isPresented: $showingSheet) {
+                        AddEmoEachTimeView(showingSheet: $showingSheet)
+                        
+                    }
+                }
+            }
+            
         }
-        
-    }
-}
+    }}
 
 struct TodayView_Previews: PreviewProvider {
     static var previews: some View {
