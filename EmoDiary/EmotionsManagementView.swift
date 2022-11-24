@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmotionsManagementView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(key:"name", ascending: true)]) var emotions: FetchedResults<Emotions>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key:"name", ascending: true)]) var emotions: FetchedResults<Emotion>
     
     @State var showingSheet = false
     
@@ -89,7 +89,7 @@ struct EmotionsManagementView: View {
     
     private func searchPredicate(query:String) -> NSPredicate? {
         if query.isEmpty { return nil}
-        return NSPredicate(format: "%K CONTAINS[cd] %@", #keyPath(Emotions.name), query)
+        return NSPredicate(format: "%K CONTAINS[cd] %@", #keyPath(Emotion.name), query)
     }
 }
 

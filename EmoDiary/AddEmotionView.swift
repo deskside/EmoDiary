@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddEmotionView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) var emotions: FetchedResults<Emotions>
+    @FetchRequest(sortDescriptors: []) var emotions: FetchedResults<Emotion>
     
     @Binding var showingSheet:Bool
     @State private var showingAlert = false
@@ -64,7 +64,7 @@ struct AddEmotionView: View {
     }
     
     func addCoreDataEmotion(name:String, emoji:String, info:String){
-        let coreData = Emotions(context: viewContext)
+        let coreData = Emotion(context: viewContext)
         coreData.id = UUID()
         coreData.name = name
         coreData.emoji = emoji

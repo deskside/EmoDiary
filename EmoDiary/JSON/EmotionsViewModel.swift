@@ -35,7 +35,7 @@ class EmotionsViewModel:ObservableObject{
         
         
         for each in emotionsJson{
-            let coreData = Emotions(context: managedObjectContext)
+            let coreData = Emotion(context: managedObjectContext)
             
             coreData.id = UUID()
             

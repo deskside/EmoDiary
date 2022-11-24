@@ -9,8 +9,8 @@ import SwiftUI
 
 struct AddEmoEachTimeView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) var emoEachTime: FetchedResults<EmoEachTime>
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) var emotions:FetchedResults<Emotions>
+    @FetchRequest(sortDescriptors: []) var emoEachTime: FetchedResults<Record>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) var emotions:FetchedResults<Emotion>
     
     @Binding var showingSheet:Bool
     @State private var showingAlert = false
@@ -67,7 +67,7 @@ struct AddEmoEachTimeView: View {
         }}
     
     func addCoreDataEmoEachTime(name:String, emoji:String, info:String){
-        let coreData = Emotions(context: viewContext)
+        let coreData = Emotion(context: viewContext)
         coreData.id = UUID()
         coreData.name = name
         coreData.emoji = emoji

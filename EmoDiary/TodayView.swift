@@ -33,13 +33,15 @@ struct TodayView: View {
                             .padding()
                             .offset(x: 0, y: 30)
                     }
-                    
-                    NavigationLink {
-                        TestView()
-                    } label: {
-                        EmoEachTimeLineView()
-                        
+                    ForEach(1...10, id: \.self){ _ in
+                        NavigationLink {
+                            TestView()
+                        } label: {
+                            EmoEachTimeLineView()
+                            
+                        }
                     }
+                    
                     
                     
                     Spacer()

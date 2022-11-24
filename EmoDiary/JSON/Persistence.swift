@@ -14,7 +14,7 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let newItem = EmoEachTime(context: viewContext)
+            let newItem = Record(context: viewContext)
             newItem.timestamp = Date()
         }
         do {
@@ -32,13 +32,16 @@ struct PersistenceController {
 
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "EmoDiary")
+        
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
+        
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                
 
                 /*
                  Typical reasons for an error here include:
@@ -50,7 +53,24 @@ struct PersistenceController {
                  */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
+            
+//            self.container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
+    }
+}
+
+class DataController:ObservableObject{
+    let container = NSPersistentContainer(name: "")
+    
+    init(){
+        container.loadPersistentStores {desciption, error in
+            if let error = error{
+                print("Core Data failed to load: \(error.localizedDescription)")
+                return
+            }
+            
+            self.container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        }
     }
 }

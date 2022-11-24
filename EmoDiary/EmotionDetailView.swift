@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct EmotionDetailView: View {
-    @State var emotion:Emotions
+    @State var emotion:Emotion
     
     
     var body: some View {

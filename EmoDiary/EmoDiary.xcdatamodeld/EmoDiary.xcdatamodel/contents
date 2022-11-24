@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="EmoEachTime" representedClassName="EmoEachTime" syncable="YES" codeGenerationType="class">
-        <attribute name="emotions" optional="YES" attributeType="Transformable" valueTransformerName="Emotions"/>
-        <attribute name="feelings" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="recordFrequency" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="emotion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Emotions" inverseName="emoEachTime" inverseEntity="Emotions"/>
-    </entity>
-    <entity name="Emotions" representedClassName="Emotions" syncable="YES" codeGenerationType="class">
+    <entity name="Emotion" representedClassName="Emotion" syncable="YES">
         <attribute name="emoji" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="info" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="emoEachTime" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="EmoEachTime" inverseName="emotion" inverseEntity="EmoEachTime"/>
+        <relationship name="record" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Record" inverseName="emotion" inverseEntity="Record"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Record" representedClassName="Record" syncable="YES">
+        <attribute name="feelings" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="emotion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Emotion" inverseName="record" inverseEntity="Emotion"/>
     </entity>
 </model>
