@@ -36,11 +36,14 @@ struct TodayView: View {
                             .padding()
                             .offset(x: 0, y: 30)
                     }
-                    ForEach(records){ each in
-                        NavigationLink{
-                            TestView()
-                        } label: {
-                            Text(each.emotion?.emoji ?? "No")
+                    Group {
+                        ForEach(records){ each in
+                            NavigationLink{
+                                TestView()
+                            } label: {
+                                RecordLineView(name: each.emotion?.name ?? "No name",date: each.timestamp ?? Date(),emoji: each.emotion?.emoji ?? "❎", feelings: each.feelings ?? "No feelings" )
+                                
+                            }
                         }
                     }
                     

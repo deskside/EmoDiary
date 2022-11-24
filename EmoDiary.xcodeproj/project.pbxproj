@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E417CEAC292FB4EE000BCAF1 /* Emotion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417CEA8292FB4EE000BCAF1 /* Emotion+CoreDataClass.swift */; };
+		E417CEAD292FB4EE000BCAF1 /* Emotion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417CEA9292FB4EE000BCAF1 /* Emotion+CoreDataProperties.swift */; };
+		E417CEAE292FB4EE000BCAF1 /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417CEAA292FB4EE000BCAF1 /* Record+CoreDataClass.swift */; };
+		E417CEAF292FB4EE000BCAF1 /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417CEAB292FB4EE000BCAF1 /* Record+CoreDataProperties.swift */; };
 		E42334E1292A6E6A004D782A /* EmotionLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42334E0292A6E6A004D782A /* EmotionLineView.swift */; };
 		E42334E3292B166E004D782A /* EmotionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42334E2292B166E004D782A /* EmotionDetailView.swift */; };
 		E42334E5292BB9C5004D782A /* RecordLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42334E4292BB9C5004D782A /* RecordLineView.swift */; };
@@ -16,10 +20,6 @@
 		E4307A522923D3DE007C94ED /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A512923D3DE007C94ED /* StatisticsView.swift */; };
 		E4307A542923D40F007C94ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A532923D40F007C94ED /* Constants.swift */; };
 		E4307A562923D53A007C94ED /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4307A552923D53A007C94ED /* TabsView.swift */; };
-		E4608F7D292F4E1600F6E596 /* Emotion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4608F79292F4E1500F6E596 /* Emotion+CoreDataClass.swift */; };
-		E4608F7E292F4E1600F6E596 /* Emotion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4608F7A292F4E1600F6E596 /* Emotion+CoreDataProperties.swift */; };
-		E4608F7F292F4E1600F6E596 /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4608F7B292F4E1600F6E596 /* Record+CoreDataClass.swift */; };
-		E4608F80292F4E1600F6E596 /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4608F7C292F4E1600F6E596 /* Record+CoreDataProperties.swift */; };
 		E4608F82292F579100F6E596 /* DateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4608F81292F579100F6E596 /* DateController.swift */; };
 		E47EEAB629287AD8003E6493 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47EEAB529287AD8003E6493 /* Emojis.swift */; };
 		E47EEABA2928BC43003E6493 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E47EEABC2928BC43003E6493 /* Localizable.strings */; };
@@ -42,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E417CEA8292FB4EE000BCAF1 /* Emotion+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emotion+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E417CEA9292FB4EE000BCAF1 /* Emotion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emotion+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		E417CEAA292FB4EE000BCAF1 /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E417CEAB292FB4EE000BCAF1 /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		E42334E0292A6E6A004D782A /* EmotionLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionLineView.swift; sourceTree = "<group>"; };
 		E42334E2292B166E004D782A /* EmotionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionDetailView.swift; sourceTree = "<group>"; };
 		E42334E4292BB9C5004D782A /* RecordLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordLineView.swift; sourceTree = "<group>"; };
@@ -51,10 +55,6 @@
 		E4307A512923D3DE007C94ED /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		E4307A532923D40F007C94ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E4307A552923D53A007C94ED /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
-		E4608F79292F4E1500F6E596 /* Emotion+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emotion+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		E4608F7A292F4E1600F6E596 /* Emotion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emotion+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		E4608F7B292F4E1600F6E596 /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		E4608F7C292F4E1600F6E596 /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		E4608F81292F579100F6E596 /* DateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateController.swift; sourceTree = "<group>"; };
 		E47EEAB529287AD8003E6493 /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
 		E47EEABB2928BC43003E6493 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -131,10 +131,10 @@
 		E4C981A5292210FA0061B3E2 /* EmoDiary */ = {
 			isa = PBXGroup;
 			children = (
-				E4608F79292F4E1500F6E596 /* Emotion+CoreDataClass.swift */,
-				E4608F7A292F4E1600F6E596 /* Emotion+CoreDataProperties.swift */,
-				E4608F7B292F4E1600F6E596 /* Record+CoreDataClass.swift */,
-				E4608F7C292F4E1600F6E596 /* Record+CoreDataProperties.swift */,
+				E417CEA8292FB4EE000BCAF1 /* Emotion+CoreDataClass.swift */,
+				E417CEA9292FB4EE000BCAF1 /* Emotion+CoreDataProperties.swift */,
+				E417CEAA292FB4EE000BCAF1 /* Record+CoreDataClass.swift */,
+				E417CEAB292FB4EE000BCAF1 /* Record+CoreDataProperties.swift */,
 				E4C981A6292210FA0061B3E2 /* EmoDiaryApp.swift */,
 				E47EEABC2928BC43003E6493 /* Localizable.strings */,
 				E4307A552923D53A007C94ED /* TabsView.swift */,
@@ -250,11 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E417CEAE292FB4EE000BCAF1 /* Record+CoreDataClass.swift in Sources */,
 				E42334E9292BBFEC004D782A /* AddRecordView.swift in Sources */,
+				E417CEAC292FB4EE000BCAF1 /* Emotion+CoreDataClass.swift in Sources */,
 				E4C981B0292210FB0061B3E2 /* Persistence.swift in Sources */,
 				E42334E1292A6E6A004D782A /* EmotionLineView.swift in Sources */,
 				E47EEAC62929085B003E6493 /* DataService.swift in Sources */,
-				E4608F80292F4E1600F6E596 /* Record+CoreDataProperties.swift in Sources */,
 				E47EEAC12928FF5A003E6493 /* EmotionsManagementView.swift in Sources */,
 				E4C981A9292210FA0061B3E2 /* ContentView.swift in Sources */,
 				E47EEAC429290821003E6493 /* JsonModel.swift in Sources */,
@@ -265,12 +266,11 @@
 				E4307A4E2923D3AF007C94ED /* SettingsView.swift in Sources */,
 				E4307A522923D3DE007C94ED /* StatisticsView.swift in Sources */,
 				E4C981A7292210FA0061B3E2 /* EmoDiaryApp.swift in Sources */,
+				E417CEAD292FB4EE000BCAF1 /* Emotion+CoreDataProperties.swift in Sources */,
 				E4C981B3292210FB0061B3E2 /* EmoDiary.xcdatamodeld in Sources */,
-				E4608F7D292F4E1600F6E596 /* Emotion+CoreDataClass.swift in Sources */,
 				E47EEAB629287AD8003E6493 /* Emojis.swift in Sources */,
-				E4608F7E292F4E1600F6E596 /* Emotion+CoreDataProperties.swift in Sources */,
-				E4608F7F292F4E1600F6E596 /* Record+CoreDataClass.swift in Sources */,
 				E47EEACC29290965003E6493 /* EmotionsViewModel.swift in Sources */,
+				E417CEAF292FB4EE000BCAF1 /* Record+CoreDataProperties.swift in Sources */,
 				E42334E5292BB9C5004D782A /* RecordLineView.swift in Sources */,
 				E42334E3292B166E004D782A /* EmotionDetailView.swift in Sources */,
 				E47EEAD2292A0EC4003E6493 /* AddEmotionView.swift in Sources */,

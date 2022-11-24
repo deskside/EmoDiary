@@ -5,7 +5,7 @@
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="info" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="record" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Record" inverseName="emotion" inverseEntity="Record"/>
+        <relationship name="record" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Record" inverseName="emotion" inverseEntity="Record"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="name"/>

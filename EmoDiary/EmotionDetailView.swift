@@ -9,8 +9,8 @@ import SwiftUI
 import CoreData
 
 struct EmotionDetailView: View {
+    @Environment(\.managedObjectContext) private var viewContext
     @State var emotion:Emotion
-    
     
     var body: some View {
         List{
@@ -34,6 +34,11 @@ struct EmotionDetailView: View {
                 }
             }
             
+            Section{
+                ForEach(emotion.recordArray){each in
+                    RecordLineView(name: each.emotion?.name ?? "No name",date: each.timestamp ?? Date(),emoji: each.emotion?.emoji ?? "❎", feelings: each.feelings ?? "No feelings" )
+                }
+            }
             
         }
         

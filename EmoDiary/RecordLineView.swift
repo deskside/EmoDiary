@@ -25,8 +25,8 @@ struct RecordLineView: View {
                         .font(.title3)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
-//                    Text(DateController.dateToString(date: date))
-//                        .font(.footnote)
+                    Text(DateController.dateToString(date: date))
+                        .font(.footnote)
                 }
                 Text(feelings)
                     .multilineTextAlignment(.leading)

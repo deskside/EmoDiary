@@ -13,6 +13,7 @@ struct EmotionLineView: View {
     @State var info:String = ""
     
     var body: some View {
+        
         HStack {
             Text(emoji)
                 .font(.title)
@@ -30,5 +31,6 @@ struct EmotionLineView: View {
             }
             
         }
+        
     }
 }

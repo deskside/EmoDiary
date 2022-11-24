@@ -20,7 +20,32 @@ extension Emotion {
     @NSManaged public var id: UUID?
     @NSManaged public var info: String?
     @NSManaged public var name: String?
-    @NSManaged public var record: Record?
+    @NSManaged public var record: NSSet?
+    
+    public var recordArray: [Record]{
+        let set = record as? Set<Record> ?? []
+        
+        return set.sorted {
+            $0.timestamp ?? Date() < $1.timestamp ?? Date()
+        }
+    }
+
+}
+
+// MARK: Generated accessors for record
+extension Emotion {
+
+    @objc(addRecordObject:)
+    @NSManaged public func addToRecord(_ value: Record)
+
+    @objc(removeRecordObject:)
+    @NSManaged public func removeFromRecord(_ value: Record)
+
+    @objc(addRecord:)
+    @NSManaged public func addToRecord(_ values: NSSet)
+
+    @objc(removeRecord:)
+    @NSManaged public func removeFromRecord(_ values: NSSet)
 
 }
 
