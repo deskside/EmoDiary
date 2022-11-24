@@ -10,7 +10,7 @@ import SwiftUI
 struct TabsView: View {
     @Environment(\.managedObjectContext) var viewContext
     @FetchRequest(sortDescriptors: []) var eachEmo: FetchedResults<Record>
-    @State private var tabSelection:Int = 4
+    @State private var tabSelection:Int = 0
     
     var body: some View {
         TabView(selection: $tabSelection) {
@@ -32,7 +32,7 @@ struct TabsView: View {
             SettingsView()
                 .tabItem {
                     Text("Settings")
-                    Image(systemName: "gearshape")
+                    Image(systemName: "gear")
                 }
                 .tag(4)
             

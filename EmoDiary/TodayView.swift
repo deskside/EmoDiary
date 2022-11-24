@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TodayView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: []) var records: FetchedResults<Record>
+    
     @State private var showingAlerts = true
     @AppStorage("isDarkMode") private var isDarkMode = false
     @State var showingSheet:Bool = false
@@ -33,12 +36,22 @@ struct TodayView: View {
                             .padding()
                             .offset(x: 0, y: 30)
                     }
-                    ForEach(1...10, id: \.self){ _ in
-                        NavigationLink {
+                    ForEach(records){ each in
+                        NavigationLink{
                             TestView()
                         } label: {
-                            EmoEachTimeLineView()
-                            
+                            Text(each.emotion?.emoji ?? "No")
+                        }
+                    }
+                    
+                    Group {
+                        ForEach(1...10, id: \.self){ _ in
+                            NavigationLink {
+                                TestView()
+                            } label: {
+                                RecordLineView()
+                                
+                            }
                         }
                     }
                     
@@ -58,7 +71,7 @@ struct TodayView: View {
                     } label: {
                         Text("Add")
                     }.sheet(isPresented: $showingSheet) {
-                        AddEmoEachTimeView(showingSheet: $showingSheet)
+                        AddRecordView(showingSheet: $showingSheet)
                         
                     }
                 }

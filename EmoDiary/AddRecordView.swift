@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddEmoEachTimeView: View {
+struct AddRecordView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) var emoEachTime: FetchedResults<Record>
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) var emotions:FetchedResults<Emotion>
@@ -16,8 +16,7 @@ struct AddEmoEachTimeView: View {
     @State private var showingAlert = false
     @State private var addFeelings:String = ""
     @State private var addDate:Date = Date()
-//    @State private var addEmotions:Emotions =
-    @State var selection:String = ""
+    @State private var addEmotion:String = "Anxious"
     
     var body: some View {
         NavigationStack{
@@ -34,26 +33,18 @@ struct AddEmoEachTimeView: View {
                     
             
                     
-                    Picker("Emotion", selection: $selection) {
+                    Picker("Emotion", selection: $addEmotion) {
                         ForEach(emotions) {each in
                             Text("\(each.emoji ?? "") \(each.name ?? "")")
                                 .tag(each.name ?? "")
+                            
+                            }
+                            
                         }
                     }
-                }
                 Button {
-                    
-                    //                if addName.trimmingCharacters(in: .whitespacesAndNewlines) != "" && addEmoji.trimmingCharacters(in: .whitespaces) != "" && addEmoji.containsOnlyEmoji == true{
-                    //
-                    //                    addCoreDataEmotion(name: addName.trimmingCharacters(in: .whitespacesAndNewlines), emoji: addEmoji.trimmingCharacters(in: .whitespacesAndNewlines), info: addInfo.trimmingCharacters(in: .whitespacesAndNewlines))
-                    //                    addName = ""
-                    //
-                    //                    showingSheet = false
-                    //
-                    //                }else{
-                    //                    self.showingAlert = true
-                    //                }
-                    
+                    addCoreDataRecord(emotionName: addEmotion, feelings: addFeelings, timestamp: addDate)
+                    showingSheet.toggle()
                 } label: {
                     Text("Add")
                 }
@@ -62,16 +53,21 @@ struct AddEmoEachTimeView: View {
                           message: Text(""),
                           dismissButton: .default(Text("Got it")))
                 }
+                
+                }
+                
 
             }
-        }}
+        }
     
-    func addCoreDataEmoEachTime(name:String, emoji:String, info:String){
-        let coreData = Emotion(context: viewContext)
+    func addCoreDataRecord(emotionName:String, feelings:String, timestamp:Date){
+        let coreData = Record(context: viewContext)
         coreData.id = UUID()
-        coreData.name = name
-        coreData.emoji = emoji
-        coreData.info = info
+        
+        coreData.emotion = emotions.first
+        
+        coreData.feelings = feelings
+        coreData.timestamp = timestamp
         do{
             try viewContext.save()
         }catch{

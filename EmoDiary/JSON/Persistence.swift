@@ -54,23 +54,26 @@ struct PersistenceController {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
             
-//            self.container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+            
         })
+        container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
 }
 
-class DataController:ObservableObject{
-    let container = NSPersistentContainer(name: "")
-    
-    init(){
-        container.loadPersistentStores {desciption, error in
-            if let error = error{
-                print("Core Data failed to load: \(error.localizedDescription)")
-                return
-            }
-            
-            self.container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        }
-    }
-}
+//class DataController:ObservableObject{
+//    static let shared = DataController()
+//
+//    let container = NSPersistentContainer(name: "")
+//
+//    init(){
+//        container.loadPersistentStores {desciption, error in
+//            if let error = error{
+//                print("Core Data failed to load: \(error.localizedDescription)")
+//                return
+//            }
+//
+//            self.container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//        }
+//    }
+//}
