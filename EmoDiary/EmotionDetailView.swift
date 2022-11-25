@@ -16,18 +16,18 @@ struct EmotionDetailView: View {
         List{
             Section{
                 HStack {
-                    Text(emotion.emoji ?? "")
+                    Text(emotion.wrappedEmoji)
                         .font(.title)
                     
                     VStack(alignment: .leading) {
                         HStack(alignment: .bottom) {
-                            Text(emotion.name ?? "")
+                            Text(emotion.wrappedName)
                                 .fontWeight(.bold)
                             
                             
                         }
                         
-                        Text(emotion.info ?? "")
+                        Text(emotion.wrappedInfo)
                             .lineLimit(2)
                     }
                     
@@ -37,12 +37,31 @@ struct EmotionDetailView: View {
             Section{
                 ForEach(emotion.recordArray){each in
                     RecordsInEmotionDetailView(date: each.wrappedDate, feelings: each.wrappedFeelings)
-                    
+                }.swipeActions(edge:.trailing){
+                    Button(role:.destructive,action: {
+                        deleteItem()
+                    },label:{
+                        Label("Delete Employee",systemImage: "trash")
+                    })
                 }
+            }
+            
+            Section{
+                
+            }
             }
             
         }
         
         
+    private func deleteItem(){
+        let itemToDelete = emotion
+        do{
+            viewContext.delete(itemToDelete)
+            try viewContext.save()
+        }
+        catch{
+            print("Error while deleting employee \(error.localizedDescription)")
+        }
     }
 }

@@ -42,22 +42,13 @@ struct TodayView: View {
                             NavigationLink{
                                 TestView()
                             } label: {
-                                RecordLineView(name: each.emotion?.name ?? "No name",date: each.timestamp ?? Date(),emoji: each.emotion?.emoji ?? "❎", feelings: each.feelings ?? "No feelings" )
+                                RecordLineView(name: each.emotion?.wrappedName,date: each.wrappedDate,emoji: each.emotion?.wrappedEmoji, feelings: each.wrappedFeelings)
                                 
                             }
                         }
                     }
                     
-                    Group {
-                        ForEach(1...10, id: \.self){ _ in
-                            NavigationLink {
-                                TestView()
-                            } label: {
-                                RecordLineView()
-                                
-                            }
-                        }
-                    }
+                    
                     
                     
                     

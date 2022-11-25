@@ -40,14 +40,14 @@ struct AddRecordView: View {
                     Picker("Emotion", selection: $selectedEmotion) {
                         
                         ForEach(emotions, id:\.self) {each in
-                            Text("\(each.emoji ?? "") \(each.name ?? "")")
+                            Text("\(each.wrappedEmoji) \(each.wrappedName)")
                             
-                            }
-                            
+                        }
+                        
                     }.onAppear{
                         selectedEmotion = emotions.first ?? Emotion()
                     }
-                    }
+                }
                 Button {
                     addRecord()
                     showingSheet.toggle()
@@ -55,16 +55,16 @@ struct AddRecordView: View {
                     Text("Add")
                 }
                 .alert(isPresented: $showingAlert) {
-                    Alert(title: Text("Please input something to describe your emotion"),
+                    Alert(title: Text("Please input something"),
                           message: Text(""),
                           dismissButton: .default(Text("Got it")))
                 }
                 
-                }
-                
-
             }
+            
+            
         }
+    }
     
     private func addRecord(){
         
