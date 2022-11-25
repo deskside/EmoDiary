@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
+import CoreData
+
 
 struct AddRecordView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) var emoEachTime: FetchedResults<Record>
-    
     
     
     @Binding var showingSheet:Bool
@@ -20,6 +20,7 @@ struct AddRecordView: View {
     @State private var addEmotion:String = "Anxious"
     
     @State private var selectedEmotion = Emotion()
+    
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) var emotions:FetchedResults<Emotion>
     
     
@@ -37,13 +38,15 @@ struct AddRecordView: View {
                     
                     
                     Picker("Emotion", selection: $selectedEmotion) {
+                        
                         ForEach(emotions, id:\.self) {each in
                             Text("\(each.emoji ?? "") \(each.name ?? "")")
-                                .tag(each.name ?? "")
                             
                             }
                             
-                        }
+                    }.onAppear{
+                        selectedEmotion = emotions.first ?? Emotion()
+                    }
                     }
                 Button {
                     addRecord()
@@ -64,6 +67,7 @@ struct AddRecordView: View {
         }
     
     private func addRecord(){
+        
         let newRecord = Record(context: viewContext)
         newRecord.id = UUID()
         newRecord.feelings = addFeelings

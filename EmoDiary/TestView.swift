@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftUIX
 import NVMColor
+import CoreData
 
 struct TestView: View {
     @Environment(\.colorScheme) private var colorScheme

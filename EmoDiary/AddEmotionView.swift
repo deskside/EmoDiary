@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct AddEmotionView: View {
     @Environment(\.managedObjectContext) private var viewContext

@@ -33,9 +33,6 @@ struct SettingsView: View {
                     
                 } header: {
                     Text("Pro purchasing")
-                } footer: {
-                    Text("Test")
-                    
                 }
                 
                 // MARK: Emotions
@@ -44,15 +41,13 @@ struct SettingsView: View {
                     NavigationLink {
                         EmotionsManagementView()
                     } label: {
-                        Label("Emotions", systemImage: "person.crop.rectangle.stack")
+                        Label("Emotions", systemImage: "heart.text.square")
                             .symbolRenderingMode(isDarkMode ? .multicolor : .monochrome)
                             .foregroundColor(isDarkMode ? .white : .black)
                     }
                     
                 } header: {
                     Text("Emotions")
-                } footer: {
-                    Text("Test")
                 }
                 
                 

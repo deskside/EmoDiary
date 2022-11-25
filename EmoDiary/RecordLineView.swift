@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import CoreData
+
 
 struct RecordLineView: View {
     @AppStorage("isDarkMode") private var isDarkMode = false
@@ -25,6 +27,7 @@ struct RecordLineView: View {
                         .font(.title3)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
+                    Spacer()
                     Text(DateController.dateToString(date: date))
                         .font(.footnote)
                 }
@@ -32,6 +35,8 @@ struct RecordLineView: View {
                     .multilineTextAlignment(.leading)
                     .lineLimit(3)
             }
+            
+            Spacer()
         }
         .padding(.top, 30)
         .padding(.horizontal, 20)

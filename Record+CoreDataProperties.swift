@@ -20,6 +20,14 @@ extension Record {
     @NSManaged public var id: UUID?
     @NSManaged public var timestamp: Date?
     @NSManaged public var emotion: Emotion?
+    
+        public var wrappedFeelings:String{
+            feelings ?? "No feelings"
+        }
+    
+        public var wrappedDate:Date{
+            timestamp ?? Date()
+        }
 
 }
 

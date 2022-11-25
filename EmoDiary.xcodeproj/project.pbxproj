@@ -39,6 +39,7 @@
 		E4C981AE292210FB0061B3E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C981AD292210FB0061B3E2 /* Preview Assets.xcassets */; };
 		E4C981B0292210FB0061B3E2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C981AF292210FB0061B3E2 /* Persistence.swift */; };
 		E4C981B3292210FB0061B3E2 /* EmoDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4C981B1292210FB0061B3E2 /* EmoDiary.xcdatamodeld */; };
+		E4E008AA2930B8810004DA87 /* RecordsInEmotionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E008A92930B8810004DA87 /* RecordsInEmotionDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		E4C981AF292210FB0061B3E2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E4C981B2292210FB0061B3E2 /* EmoDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmoDiary.xcdatamodel; sourceTree = "<group>"; };
 		E4C981B4292210FB0061B3E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4E008A92930B8810004DA87 /* RecordsInEmotionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsInEmotionDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				E47EEAD1292A0EC4003E6493 /* AddEmotionView.swift */,
 				E42334E0292A6E6A004D782A /* EmotionLineView.swift */,
 				E42334E2292B166E004D782A /* EmotionDetailView.swift */,
+				E4E008A92930B8810004DA87 /* RecordsInEmotionDetailView.swift */,
 				E4C981A8292210FA0061B3E2 /* ContentView.swift */,
 				E494690929272B0A000B447F /* TestView.swift */,
 				E47EEAC22929080C003E6493 /* JSON */,
@@ -254,6 +257,7 @@
 				E42334E9292BBFEC004D782A /* AddRecordView.swift in Sources */,
 				E417CEAC292FB4EE000BCAF1 /* Emotion+CoreDataClass.swift in Sources */,
 				E4C981B0292210FB0061B3E2 /* Persistence.swift in Sources */,
+				E4E008AA2930B8810004DA87 /* RecordsInEmotionDetailView.swift in Sources */,
 				E42334E1292A6E6A004D782A /* EmotionLineView.swift in Sources */,
 				E47EEAC62929085B003E6493 /* DataService.swift in Sources */,
 				E47EEAC12928FF5A003E6493 /* EmotionsManagementView.swift in Sources */,

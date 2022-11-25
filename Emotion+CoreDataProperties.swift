@@ -29,6 +29,18 @@ extension Emotion {
             $0.timestamp ?? Date() < $1.timestamp ?? Date()
         }
     }
+    
+        public var wrappedEmoji:String{
+            emoji ?? "🈚️"
+        }
+    
+        public var wrappedInfo:String{
+            info ?? "No further description"
+        }
+    
+        public var wrappedName:String{
+            name ?? "No name"
+        }
 
 }
 
