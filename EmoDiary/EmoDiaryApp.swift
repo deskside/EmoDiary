@@ -12,7 +12,7 @@ struct EmoDiaryApp: App {
     let persistenceController = PersistenceController.shared
 
     @AppStorage("localization") private var localization = "zh"
-    
+    @AppStorage("colorful") private var colorful = ""
     @AppStorage("isDarkMode") private var isDarkMode = false
 //    @AppStorage("darkModeAccording") private var darkModeAccording = 0
 //    @Environment(\.colorScheme) var colorScheme

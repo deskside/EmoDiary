@@ -48,9 +48,10 @@ struct SettingsView: View {
                 }
                 
                 // MARK: Appearence
-                NavigationLink {
+                
+                Section {
                     AppearenceSettingsView()
-                } label: {
+                } header: {
                     Text("Appearence")
                 }
             }

@@ -13,7 +13,7 @@ struct TabsView: View {
     @State var tabSelection:Int = 0
     private var colorRGB:[Int] = [165,42,42]
     
-    @AppStorage("colorful") private var colorful = "green"
+    @AppStorage("colorful") private var colorful = ""
     
     
 //    let array = UserDefaults.standard.array(forKey: "colorful")
