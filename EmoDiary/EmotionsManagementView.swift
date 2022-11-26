@@ -13,6 +13,7 @@ struct EmotionsManagementView: View {
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key:"name", ascending: true)]) var emotions: FetchedResults<Emotion>
     
     @State var showingSheet = false
+//    @State var showingSheetEdit = false
     
     @State private var searchQuery = ""
     
@@ -29,25 +30,22 @@ struct EmotionsManagementView: View {
                     NavigationLink {
                         EmotionDetailView(emotion: each)
                     } label: {
-                        EmotionLineView(name: each.name ?? "", emoji: each.emoji ?? "", info:each.info ?? "")
+                        EmotionLineView(emotion: each)
                         
                     }
-
-                    
+//                    .swipeActions(edge: .leading, allowsFullSwipe:true) {
+//                        Button {
+//                            showingSheetEdit.toggle()
+//                        } label: {
+//                            Text("Edit")
+//                        }.sheet(isPresented: $showingSheetEdit) {
+//                            AddEmotionView(emotion:each ,editMode: true, showingSheet: $showingSheetEdit)
+//                        }
+//
+//                    }
                     
                 }
                 .onDelete(perform: deleteItems)
-                .swipeActions(edge: .leading, allowsFullSwipe:true) {
-                    Button {
-                        showingSheet.toggle()
-                    } label: {
-                        Text("Edit")
-                    }.sheet(isPresented: $showingSheet) {
-                        
-                        AddEmotionView(showingSheet: $showingSheet)
-                    }
-                    
-                }
             }
         }
         .searchable(text: $searchQuery)
@@ -63,7 +61,7 @@ struct EmotionsManagementView: View {
                 } label: {
                     Image(systemName: "plus.app")
                 }.sheet(isPresented: $showingSheet) {
-                    AddEmotionView(showingSheet: $showingSheet)
+                    AddEmotionView(editMode: false, showingSheet: $showingSheet)
                 }
             }
         }

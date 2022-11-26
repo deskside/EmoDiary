@@ -42,6 +42,7 @@ class EmotionsViewModel:ObservableObject{
             coreData.name = each.name
             coreData.emoji = each.emoji
             coreData.info = each.info
+            coreData.color = each.color
         }
         
         

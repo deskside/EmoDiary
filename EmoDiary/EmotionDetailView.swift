@@ -10,8 +10,9 @@ import CoreData
 
 struct EmotionDetailView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @State var emotion:Emotion
-    
+    @ObservedObject var emotion:Emotion
+    @State private var showingSheet = false
+
     var body: some View {
         List{
             Section{
@@ -28,7 +29,7 @@ struct EmotionDetailView: View {
                         }
                         
                         Text(emotion.wrappedInfo)
-                            .lineLimit(2)
+                            
                     }
                     
                 }
@@ -50,7 +51,24 @@ struct EmotionDetailView: View {
                 
             }
             }
-            
+        .navigationTitle(emotion.wrappedName)
+        .navigationBarTitleDisplayMode(.automatic)
+        .toolbar {
+            ToolbarItem (placement: .navigationBarTrailing) {
+                Button {
+                    showingSheet.toggle()
+                } label: {
+                    Image(systemName: "highlighter")
+                }.sheet(isPresented: $showingSheet,onDismiss:  {
+                    
+                }, content: {
+                    AddEmotionView(emotion:emotion, editMode: true, showingSheet: $showingSheet)
+                })
+
+            }
+        }
+
+        
         }
         
         

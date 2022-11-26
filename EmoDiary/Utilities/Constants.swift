@@ -11,6 +11,9 @@ import SwiftUI
 struct Constants {
     static let isDataPreloaded = "isDataPreloaded"
     
+    // MARK: color
+    static let defaultColor = "F6C445"
+    
     // MARK: icon
     static let icon = ""
     

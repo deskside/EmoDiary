@@ -8,25 +8,39 @@
 import SwiftUI
 
 struct EmotionLineView: View {
-    @State var name:String
-    @State var emoji:String
-    @State var info:String = ""
+    @Environment(\.managedObjectContext) private var viewContext
+    @State var emotion:Emotion
+    
+
     
     var body: some View {
         
         HStack {
-            Text(emoji)
-                .font(.title)
+            ZStack{
+                
+                
+                Circle()
+                    .frame(max: CGSize(width: 50, height: 50))
+                    .foregroundColor(emotion.wrappedColor)
+                    
+                
+                Text(emotion.wrappedEmoji)
+                    .font(.title)
+                
+            }
+            
+                
+                
             
             VStack(alignment: .leading) {
                 HStack(alignment: .bottom) {
-                    Text(name)
+                    Text(emotion.wrappedName)
                         .fontWeight(.bold)
                     
                     
                 }
                 
-                Text(info)
+                Text(emotion.wrappedInfo)
                     .lineLimit(2)
             }
             

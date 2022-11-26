@@ -19,7 +19,7 @@ extension Record {
     @NSManaged public var feelings: String?
     @NSManaged public var id: UUID?
     @NSManaged public var timestamp: Date?
-    @NSManaged public var emotion: Emotion?
+    @NSManaged public var emotion: Emotion
     
         public var wrappedFeelings:String{
             feelings ?? "No feelings"

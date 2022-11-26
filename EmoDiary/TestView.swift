@@ -11,25 +11,19 @@ import NVMColor
 import CoreData
 
 struct TestView: View {
-    @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: []) var emotions: FetchedResults<Emotion>
     
-    let hexColor = Color.init(hexadecimal: "70049F").hex
-    var color1:Color{
-        var hexColor = Color.init(hexadecimal: "70049F").hex
-        return Color(hexadecimal: hexColor ?? "")
-        
-    }
+    @State private var emotion = Emotion()
+    
+    
     
     var body: some View {
-        
-        
-        
-        Text("My custom text")
-                    .foregroundColor(Color(hex: "70049F")!.themedColor(colorScheme))
-            }
-        
-
-        
+        Text("")
+    }
+    
+    
+    
     
     
 }
