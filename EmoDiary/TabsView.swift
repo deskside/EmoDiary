@@ -10,9 +10,16 @@ import SwiftUI
 struct TabsView: View {
     @Environment(\.managedObjectContext) var viewContext
     @FetchRequest(sortDescriptors: []) var eachEmo: FetchedResults<Record>
-    @State private var tabSelection:Int = 0
+    @State var tabSelection:Int = 0
+    private var colorRGB:[Int] = [165,42,42]
+    
+    @AppStorage("colorful") private var colorful = "green"
+    
+    
+//    let array = UserDefaults.standard.array(forKey: "colorful")
     
     var body: some View {
+        
         TabView(selection: $tabSelection) {
             TestView()
                 .tabItem {
@@ -36,7 +43,7 @@ struct TabsView: View {
                 }
                 .tag(4)
             
-        }
+        }.tint(ColorController.stringToColor(string: colorful))
     }
 }
 

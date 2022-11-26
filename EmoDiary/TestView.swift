@@ -16,10 +16,15 @@ struct TestView: View {
     
     @State private var emotion = Emotion()
     
-    
+    var test:String{
+        let themeColor = Color.green
+        let a = themeColor.toUIColor()
+        
+        return a?.hex ?? "WHAT"
+    }
     
     var body: some View {
-        Text("")
+        Text(test)
     }
     
     

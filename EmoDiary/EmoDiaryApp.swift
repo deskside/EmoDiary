@@ -27,6 +27,7 @@ struct EmoDiaryApp: App {
                 .preferredColorScheme(isDarkMode ? .dark : .light)
                 .environment(\.locale, .init(identifier: localization))
                 .environmentObject(EmotionsViewModel())
+                
         }
     }
 }
