@@ -51,7 +51,7 @@ struct TodayView: View {
                                     
                                     
                                     Circle()
-                                        .frame(max: CGSize(width: 50, height: 50))
+                                        .frame(CGSize(width: 50, height: 50))
                                         .foregroundColor(each.wrappedColor)
                                         
                                     
@@ -70,16 +70,12 @@ struct TodayView: View {
                             NavigationLink{
                                 TestView()
                             } label: {
-                                RecordLineView(name: each.emotion.wrappedName ,date: each.wrappedDate,emoji: each.emotion.wrappedEmoji, feelings: each.wrappedFeelings)
+                                
+                                RecordLineView(record: each)
                                 
                             }
                         }
                     }
-                    
-                    
-                    
-                    
-                    
                     Spacer()
                     
                 }

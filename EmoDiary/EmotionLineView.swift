@@ -20,7 +20,7 @@ struct EmotionLineView: View {
                 
                 
                 Circle()
-                    .frame(max: CGSize(width: 50, height: 50))
+                    .frame(CGSize(width: 50, height: 50))
                     .foregroundColor(emotion.wrappedColor)
                     
                 

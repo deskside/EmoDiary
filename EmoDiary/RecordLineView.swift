@@ -12,26 +12,36 @@ import CoreData
 struct RecordLineView: View {
     @AppStorage("isDarkMode") private var isDarkMode = false
     
-    @State var name:String = "Hopeful"
-    @State var date:Date = Date()
-    @State var emoji:String = "🤩"
-    @State var feelings:String = "One of the major problems in SwiftUI is the lack of an imperative presentation/navigation API. This makes implementing complex navigation such as deeplinking and dynamic backend-driven user flows nigh extremely difficult, and in some cases downright impossible. This is where DynamicViewPresenter comes in."
+    @Environment(\.managedObjectContext) private var viewContext
+    @State var record:Record
+    
     
     var body: some View {
         HStack {
-            Text(emoji)
-                .font(.largeTitle)
+            ZStack{
+                
+                
+                Circle()
+                    .frame(CGSize(width: 50, height: 50))
+                    .foregroundColor(record.emotion.wrappedColor)
+                    
+                
+                Text(record.emotion.wrappedEmoji)
+                    .font(.title)
+                
+            }
+            
             VStack(alignment: .leading) {
                 HStack(alignment: .bottom) {
-                    Text(name)
+                    Text(record.emotion.wrappedName)
                         .font(.title3)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
                     Spacer()
-                    Text(DateController.dateToString(date: date))
+                    Text(DateController.dateToString(date: record.wrappedDate))
                         .font(.footnote)
                 }
-                Text(feelings)
+                Text(record.wrappedFeelings)
                     .multilineTextAlignment(.leading)
                     .lineLimit(3)
             }
@@ -46,8 +56,3 @@ struct RecordLineView: View {
     }
 }
 
-struct RecordLineView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecordLineView()
-    }
-}

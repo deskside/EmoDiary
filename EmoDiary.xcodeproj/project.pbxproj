@@ -41,6 +41,7 @@
 		E4C981B0292210FB0061B3E2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C981AF292210FB0061B3E2 /* Persistence.swift */; };
 		E4C981B3292210FB0061B3E2 /* EmoDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4C981B1292210FB0061B3E2 /* EmoDiary.xcdatamodeld */; };
 		E4CFBDE82932358700F17486 /* AppearenceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFBDE72932358700F17486 /* AppearenceSettingsView.swift */; };
+		E4CFBDEA2932514200F17486 /* OneTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFBDE92932514100F17486 /* OneTouchView.swift */; };
 		E4E008AA2930B8810004DA87 /* RecordsInEmotionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E008A92930B8810004DA87 /* RecordsInEmotionDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		E4C981B2292210FB0061B3E2 /* EmoDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmoDiary.xcdatamodel; sourceTree = "<group>"; };
 		E4C981B4292210FB0061B3E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4CFBDE72932358700F17486 /* AppearenceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearenceSettingsView.swift; sourceTree = "<group>"; };
+		E4CFBDE92932514100F17486 /* OneTouchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTouchView.swift; sourceTree = "<group>"; };
 		E4E008A92930B8810004DA87 /* RecordsInEmotionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsInEmotionDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 				E4307A552923D53A007C94ED /* TabsView.swift */,
 				E4307A512923D3DE007C94ED /* StatisticsView.swift */,
 				E4307A4F2923D3D1007C94ED /* TodayView.swift */,
+				E4CFBDE92932514100F17486 /* OneTouchView.swift */,
 				E42334E4292BB9C5004D782A /* RecordLineView.swift */,
 				E42334E8292BBFEC004D782A /* AddRecordView.swift */,
 				E4307A4D2923D3AF007C94ED /* SettingsView.swift */,
@@ -283,6 +286,7 @@
 				E417CEAF292FB4EE000BCAF1 /* Record+CoreDataProperties.swift in Sources */,
 				E4923A62293103410027678F /* ColorController.swift in Sources */,
 				E4CFBDE82932358700F17486 /* AppearenceSettingsView.swift in Sources */,
+				E4CFBDEA2932514200F17486 /* OneTouchView.swift in Sources */,
 				E42334E5292BB9C5004D782A /* RecordLineView.swift in Sources */,
 				E42334E3292B166E004D782A /* EmotionDetailView.swift in Sources */,
 				E47EEAD2292A0EC4003E6493 /* AddEmotionView.swift in Sources */,
