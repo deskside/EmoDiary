@@ -24,7 +24,8 @@ struct TestView: View {
     }
     
     var body: some View {
-        Text(test)
+        Link("SwiftUI Tutorials", destination: URL(string: "https://www.simpleswiftguide.com")!)
+
     }
     
     

@@ -12,7 +12,7 @@ struct EmotionDetailView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @ObservedObject var emotion:Emotion
     @State private var showingSheet = false
-
+    
     var body: some View {
         List{
             Section{
@@ -24,12 +24,10 @@ struct EmotionDetailView: View {
                         HStack(alignment: .bottom) {
                             Text(emotion.wrappedName)
                                 .fontWeight(.bold)
-                            
-                            
                         }
                         
                         Text(emotion.wrappedInfo)
-                            
+                        
                     }
                     
                 }
@@ -38,19 +36,12 @@ struct EmotionDetailView: View {
             Section{
                 ForEach(emotion.recordArray){each in
                     RecordsInEmotionDetailView(date: each.wrappedDate, feelings: each.wrappedFeelings)
-                }.swipeActions(edge:.trailing){
-                    Button(role:.destructive,action: {
-                        deleteItem()
-                    },label:{
-                        Label("Delete Employee",systemImage: "trash")
-                    })
                 }
+                .onDelete(perform: deleteItems)
+
             }
             
-            Section{
-                
-            }
-            }
+        }
         .navigationTitle(emotion.wrappedName)
         .navigationBarTitleDisplayMode(.automatic)
         .toolbar {
@@ -64,22 +55,27 @@ struct EmotionDetailView: View {
                 }, content: {
                     AddEmotionView(emotion:emotion, editMode: true, showingSheet: $showingSheet)
                 })
-
+                
             }
         }
-
-        
-        }
         
         
-    private func deleteItem(){
-        let itemToDelete = emotion
-        do{
-            viewContext.delete(itemToDelete)
-            try viewContext.save()
-        }
-        catch{
-            print("Error while deleting employee \(error.localizedDescription)")
+    }
+    
+    private func deleteItems(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { emotion.recordArray[$0] }.forEach(viewContext.delete)
+            
+            do {
+                try viewContext.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
         }
     }
+    
+
 }

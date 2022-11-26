@@ -93,6 +93,7 @@ struct AppearenceSettingsView: View {
             Label("Language", systemImage: localization == "en" ? "dollarsign.circle" : "yensign.circle")
                 .symbolRenderingMode(isDarkMode ? .multicolor : .monochrome)
                 .foregroundColor(isDarkMode ? .white : .black)
+                
         }
         
         

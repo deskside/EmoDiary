@@ -10,7 +10,7 @@ import CoreData
 
 struct TodayView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) var records: FetchedResults<Record>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "timestamp", ascending: false)]) var records: FetchedResults<Record>
     @FetchRequest(sortDescriptors: []) var emotions: FetchedResults<Emotion>
     
     @State private var showingAlerts = true
@@ -43,26 +43,7 @@ struct TodayView: View {
                     .padding(.bottom, 15)
                     
                     // MARK: OneTouch
-                    ScrollView(.horizontal,showsIndicators: false){
-                        
-                        LazyHGrid(rows: [GridItem(.fixed(80))]){
-                            ForEach(emotions){each in
-                                ZStack{
-                                    
-                                    
-                                    Circle()
-                                        .frame(CGSize(width: 50, height: 50))
-                                        .foregroundColor(each.wrappedColor)
-                                        
-                                    
-                                    Text(each.wrappedEmoji)
-                                        .font(.title)
-                                    
-                                }
-                                
-                            }.padding(.leading,15)
-                        }
-                    }
+                    OneTouchView()
                     
                     // MARK: Records
                     Group {
